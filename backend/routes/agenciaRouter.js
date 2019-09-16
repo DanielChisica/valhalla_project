@@ -21,6 +21,13 @@ router.get('/vuelo', (req, res, next) => {
     }).catch(next)
 })
 
+// anidado
+router.get('/vuelo/anidado', (req, res, next) => {
+    //db.collection.find()
+  vuelo.find({ "hotel.nombreHotel": "nordico"  }).then((vuelo) => {
+        res.send(vuelo)
+    }).catch(next)
+})
 
 //actualizacion dato -> update PUT
 //aveiguar como se usa multi:true para actualizar varias lineas
