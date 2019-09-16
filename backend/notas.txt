@@ -1,0 +1,22 @@
+Integracion MERN
+
+instalar paquetes necesarios
+{
+    Instalar versiones de un paquete con NPM
+Normalmente instalamos los paquetes de la siguiente manera:
+
+npm install socket.io
+Pero si queremos instalar una versión anterior, como por ejemplo la 0.9.16 de socket.io:
+
+npm install socket.io@0.9.16
+Lo mismo para desinstalarlo:
+
+npm uninstall socket.io@0.9.16
+}
+
+npm init //genera el package.json
+npm install express  --save
+npm install body-parser --save
+npm install mongoose --save
+
+
