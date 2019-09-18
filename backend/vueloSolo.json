@@ -1,0 +1,41 @@
+{
+    "vueloSolo": {
+        "fechavuelo": {
+            "fechasalida": "new Date()",
+            "horasalida": "new Date()",
+            "fechallegada": "new Date()",
+            "horallegada": "new Date()"
+        },
+        "destino": {
+            "paisdestino": "finlandia/islandia/suecia"
+        },
+        "categoria": {
+            "tipocategoria": "ejecutiva/economica/turista",
+            "preciocategoria": "1500000",
+            "preciocategoriaVerano": "1500000",
+            "cantidadsajerosAdultos":"8",
+            "cantidadpasajerosNino":"2"
+    },
+    "hotelsolo": {
+        "hospedaje": {
+            "tipohospedaje": "sencilla/doble/suite",
+            "doble": "",
+            "suite": ""
+        }
+    },
+
+    "alimentacionsolo": {
+        "desayuno": "true/false",
+        "almuerzo": "true/false",
+        "cena": "true/false"
+    },
+    
+    "planturisticosolo": {
+        "tour1": "true/false",
+        "tour2": "true/false",
+        "tour3": "true/false",
+        "tour4": "true/false"
+    }
+
+}
+}

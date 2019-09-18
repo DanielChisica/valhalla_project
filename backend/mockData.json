@@ -1,0 +1,50 @@
+{
+    "agencia": {
+        "fechavuelo": {
+            "fechasalida": "new Date()",
+            "horasalida": "new Date()",
+            "fechallegada": "new Date()",
+            "horallegada": "new Date()"
+        },
+        "destino": {
+            "paisdestino": "finlandia/islandia/suecia"
+        },
+        "categoria": {
+            "tipocategoria": "ejecutiva/economica/turista",
+            "preciocategoria": "1500000",
+            "preciocategoriaVerano": "1500000",
+            "cantidadsajerosAdultos":"8",
+            "cantidadpasajerosNino":"2"
+        },
+        "hotel": {
+            "hospedaje": {
+                "tipohospedaje": "sencilla/doble/suite",
+                "valorhospedaje": "800000"
+                
+            },
+            "alimentacion": {
+                "desayuno": "0/1",
+                "almuerzo": "true/false",
+                "cena": "true/false",
+                "totalalimentacon":"1200000"
+            },
+            "planturisticoSuecia": {
+                "tour1": "true/false",
+                "tour2": "true/false",
+                "tour3": "true/false",
+                "tour4": "true/false"
+            },"planturisticoIslandia": {
+                "tour1": "true/false",
+                "tour2": "true/false",
+                "tour3": "true/false",
+                "tour4": "true/false"
+            },"planturisticoFinalandia": {
+                "tour1": "true/false",
+                "tour2": "true/false",
+                "tour3": "true/false",
+                "tour4": "true/false"
+            }
+        }
+    }
+
+}
