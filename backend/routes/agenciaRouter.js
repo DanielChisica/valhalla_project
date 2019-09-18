@@ -26,7 +26,7 @@ router.get('/vuelo', (req, res, next) => {
 //aveiguar como se usa multi:true para actualizar varias lineas
 
 router.put('/vuelo/:id', (req, res, next) => {
-    //db.collection.uodate ({condicion }, {$set: {}})
+    //db.collection.update ({condicion }, {$set: {}})
     vuelo.findByIdAndUpdate({ _id: req.params.id }, req.body).then(() => {
         //db.collection.find({condicion})
         vuelo.findOne({ _id: req.params.id }).then((vuelo) => {
