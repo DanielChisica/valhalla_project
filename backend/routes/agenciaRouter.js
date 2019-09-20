@@ -25,7 +25,7 @@ router.get('/vuelo', (req, res, next) => {
 // anidado
 router.get('/vuelo/anidado', (req, res, next) => {
     //db.collection.find()
-  vuelo.find({ "hotel.nombreHotel": "nordico"  }).then((vuelo) => {
+  vuelo.find({  }).then((vuelo) => {
         res.send(vuelo)
     }).catch(next)
 })
@@ -63,6 +63,15 @@ router.delete('/vuelo/:id', (req, res, next) => {
         res.send(banda)
     }).catch(next)
 });
+
+
+// anidado
+router.get('/sillas/anidado', (req, res, next) => {
+    //db.collection.find()
+  sillas.find({  }).then((vuelo) => {
+        res.send(vuelo)
+    }).catch(next)
+})
 
 
 module.exports = router
