@@ -40,12 +40,19 @@ router.get('/vuelo', (req, res, next) => {
     }).catch(next)
 })
 
+// anidado
+router.get('/vuelo/anidado', (req, res, next) => {
+    //db.collection.find()
+  vuelo.find({ "hotel.nombreHotel": "nordico"  }).then((vuelo) => {
+        res.send(vuelo)
+    }).catch(next)
+})
 
 //actualizacion dato -> update PUT
 //aveiguar como se usa multi:true para actualizar varias lineas
 
 router.put('/vuelo/:id', (req, res, next) => {
-    //db.collection.update ({condicion }, {$set: {}})
+    //db.collv ection.uodate ({condicion }, {$set: {}})
     vuelo.findByIdAndUpdate({ _id: req.params.id }, req.body).then(() => {
         //db.collection.find({condicion})
         vuelo.findOne({ _id: req.params.id }).then((vuelo) => {
