@@ -1,6 +1,7 @@
 const express = require  ('express')
 const router = express.Router()
 const vuelo = require('../modelo/modeloVuelo')
+const sillas = require('../modelo/modeloSillas')
 
 //agregar POST (create) 
 
@@ -41,6 +42,17 @@ router.put('/vuelo/:id', (req, res, next) => {
         })
     }).catch(next)
 })
+
+router.put('/sillas/:id', (req, res, next) => {
+    //db.collv ection.uodate ({condicion }, {$set: {}})
+    vuelo.findByIdAndUpdate({ _id: req.params.id }, req.body).then(() => {
+        //db.collection.find({condicion})
+        vuelo.findOne({ _id: req.params.id }).then((vuelo) => {
+            res.send(vuelo)
+        })
+    }).catch(next)
+})
+
 
 
 
