@@ -1,71 +1,164 @@
 {
-    "planturisticoSuecia": {
-        "tour1": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tourprecio1": 143447,
-        "tipo1" : "pareja", 
-        "tour2": "Excursión de un día sobre la historia vikinga desde Estocolmo con Uppsala",
-        "tourprecio2": 558045,
-        "tour3": "Tour privado de un día a Uppsala - Catedral de Uppsala, entierrosvikingos y campo",
-        "tourprecio3": 629769,
-        "tour4": "Stockholm Pass",
-        "tourprecio4": 234064,
-        "tour5": "Visita guiada al Museo Vasa",
-        "tourprecio5": 209932,
-        "tour6": "Excursión histórica y paseo para conocer los fantasmas de Estocolmo",
-        "tourprecio6": 98795,
-        "tour7": "true/false",
-        "tourprecio7": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour8": "true/false",
-        "tourprecio8": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour9": "true/false",
-        "tourprecio9": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour10": "true/false",
-        "tourprecio10": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour11": "true/false",
-        "tourprecio11": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour12": "true/false",
-        "tourprecio12": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour13": "true/false",
-        "tourprecio13": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour14": "true/false",
-        "tourprecio14": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour15": "true/false",
-        "tourprecio15": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-        "tour16": "true/false",
-        "tourprecio16": "Birka, ciudad de los vikingos - Visita a pie y en barco"
-    },"planturisticoIslandia": {
-        "tour1": "true/false",
-        "tour2": "true/false",
-        "tour3": "true/false",
-        "tour4": "true/false",
-        "tour5": "true/false",
-        "tour6": "true/false",
-        "tour7": "true/false",
-        "tour8": "true/false",
-        "tour9": "true/false",
-        "tour10": "true/false",
-        "tour11": "true/false",
-        "tour12": "true/false",
-        "tour13": "true/false",
-        "tour14": "true/false",
-        "tour15": "true/false",
-        "tour16": "true/false"
-    },"planturisticoFinalandia": {
-        "tour1": "true/false",
-        "tour2": "true/false",
-        "tour3": "true/false",
-        "tour4": "true/false",
-        "tour5": "true/false",
-        "tour6": "true/false",
-        "tour7": "true/false",
-        "tour8": "true/false",
-        "tour9": "true/false",
-        "tour10": "true/false",
-        "tour11": "true/false",
-        "tour12": "true/false",
-        "tour13": "true/false",
-        "tour14": "true/false",
-        "tour15": "true/false",
-        "tour16": "true/false"
-    }    
+  "planturisticoSuecia": [
+    {
+      "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+      "precio": 143447
+    },
+    {
+      "tour": "Excursión de un día sobre la historia vikinga desde Estocolmo con Uppsala",
+      "precio": 558045
+    },
+    {
+      "tour": "tour privado de un día a Uppsala - Catedral de Uppsala, entierrosvikingos y campo",
+      "precio": 629769
+    },
+    {
+      "tour": "Stockholm Pass",
+      "precio": 234064
+    },
+    {
+      "tour": "Visita guiada al Museo Vasa",
+      "precio": 209932
+    },
+    {
+      "tour": "Excursión histórica y paseo para conocer los fantasmas de Estocolmo",
+      "precio": 98795
+    },
+    {
+      "tour": "Expedición Aurora en trineo de motos de nieve",
+      "precio": 313135
+    },
+    {
+      "tour": "Malmô Tours - Cruzando el puente a Suecia",
+      "precio": 249841
+    },
+    {
+      "tour": "Kattegattleden (Tour en bicicleta) (sur Helsenborg - norteGotemburg)",
+      "precio": 721618
+    },
+    {
+      "tour": "Turismo en el archipiélago de Gotemburgo",
+      "precio": "Birka, ciudad de los vikingos - Visita a pie y en barco"
+    },
+    {
+        "tour": "true/false",
+        "precio": "Birka, ciudad de los vikingos - Visita a pie y en barco"
+    },
+    {
+        "tour": "Excursión histórica y paseo para conocer los fantasmas de Estocolmo",
+        "precio": 98795
+      },
+      {
+        "tour": "Sydkustleden -Öresund (Helsenborg)",
+        "precio": 1110181
+      },
+      {
+        "tour": "Recorrido clásico de un día por la península de Snæfellsnes desde Reikiavik",
+        "precio": 301678
+      },
+      {
+        "tour": "Recorrido de senderismo por el glaciar Skaftafell para grupos pequenos",
+        "precio": 222036
+      },
+      {
+        "tour": "Cueva de hielo de obsidiana junto al volcán Katla desde Vik",
+        "precio": 444072
+      },{
+        "tour": "Excursión de avistamiento de ballenas tradicional desde Húsavík",
+        "precio": 284947
+      }
+  ],
+  "planturisticoIslandia":
+   [
+  {
+    "tour": "Recorrido clásico de un día por la península de Snæfellsnes desde Reikiavik",
+    "precio": 301678
+  }, {
+    "tour": "Gullfoss Canyon Rafting Adventure en el río Hvita",
+    "precio": 381162
+  },
+  {
+    "tour": "Experiencia de buceo de superficie en Silfra Fissurea en el Parque Nacional Thingvellir",
+    "precio": 422979   
+  },
+  {
+    "tour": "Reykjavík - Northern Lights en barco",
+    "precio": 240539
+  },
+  {
+    "tour": " Vatnshellir Lava Cave Tour",
+    "precio": 99916
+  },
+  {
+    "tour": "Excursión al cráter volcánico de Kerid y la Laguna Azul desde Reikiavik",
+    "precio": 444664
+  },
+  {
+    "tour": "Laguna Secret",
+    "precio": 85114
+  },
+  {
+    "tour": "Visite las cataratas de Seljalandsfoss y Skogafoss. Haga una parada en el pequeño pueblo de Vik",
+    "precio": 335235
+  },
+  {
+    "tour": "Recorrido por la cueva de hielo del glaciar Langjökull desde Húsafell",
+    "precio": 521785
+  },
+  {
+    "tour": "Escapada de un día al Círculo de Diamante desde Akureyri",
+    "precio": 532887
+  },
+  {
+    "tour": "Excursión de un día a Landmannalauga",
+    "precio": 310851
+  },
+  {
+    "tour": "Baños geotérmicos",
+    "precio": 125821
+  }
+],
+
+"planturisticoFindalia":
+   [
+  {
+    "tour": "Tarjeta de Helsinki",
+    "precio": 182677
+  }, {
+    "tour": "Helsinki en kayak",
+    "precio": 290792
+  },
+  {
+    "tour": "Nuuksio Canoa y Caminata Aventura",
+    "precio": 290792
+  },
+  {
+    "tour": "Hielo flotando en Forest Lake con Aurora Borealis",
+    "precio": 240539
+  },
+  {
+    "tour": "Visita el Arctic Snow Hotel",
+    "precio": 369082
+  },
+  {
+    "tour": "Safari de renos en Laponia desde Rovaniemi",
+    "precio": 444664
+  },
+  {
+    "tour": "El mejor tour privado al zoológico con oso polar desde Rovaniemi",
+    "precio": 253511
+  },
+  {
+    "tour": "* INVIERNO - Cascadas de hielo de Korouoma y senderismo en elparque nacional",
+    "precio": 667330
+  },
+  {
+    "tour": "EXCURSION AL PUEBLO DE SANTA CLAUS",
+    "precio": 242327
+  },
+  {
+    "tour": "Moto de nieve Northern Lights Safari de conducción",
+    "precio": 592768
+  }
+]
 }

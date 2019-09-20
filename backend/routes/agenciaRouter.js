@@ -1,6 +1,7 @@
 const express = require  ('express')
 const router = express.Router()
 const vuelo = require('../modelo/modeloVuelo')
+
 //agregar POST (create)
 let avion = require('../modelo/avion');
 
@@ -22,6 +23,7 @@ router.post('/avion',(req, res) => {
             () => res.json('Avion actualizado!'))
 });
 
+const sillas = require('../modelo/modeloSillas')
 
 router.post('/vuelo', (req, res, next) => {
     //db.collection.insert( documento )
@@ -43,7 +45,7 @@ router.get('/vuelo', (req, res, next) => {
 // anidado
 router.get('/vuelo/anidado', (req, res, next) => {
     //db.collection.find()
-  vuelo.find({ "hotel.nombreHotel": "nordico"  }).then((vuelo) => {
+  vuelo.find({  }).then((vuelo) => {
         res.send(vuelo)
     }).catch(next)
 })
@@ -61,6 +63,17 @@ router.put('/vuelo/:id', (req, res, next) => {
     }).catch(next)
 })
 
+router.put('/sillas/:id', (req, res, next) => {
+    //db.collv ection.uodate ({condicion }, {$set: {}})
+    vuelo.findByIdAndUpdate({ _id: req.params.id }, req.body).then(() => {
+        //db.collection.find({condicion})
+        vuelo.findOne({ _id: req.params.id }).then((vuelo) => {
+            res.send(vuelo)
+        })
+    }).catch(next)
+})
+
+
 
 
 //Eliminar - Delete
@@ -71,5 +84,12 @@ router.delete('/vuelo/:id', (req, res, next) => {
     }).catch(next)
 });
 
+// anidado
+router.get('/sillas/anidado', (req, res, next) => {
+    //db.collection.find()
+  sillas.find({  }).then((vuelo) => {
+        res.send(vuelo)
+    }).catch(next)
+})
 
 module.exports = router
