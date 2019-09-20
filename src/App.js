@@ -1,26 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class Avion extends Component {
+  sillaRef = React.createRef();
+  constructor(props) {
+    super(props);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.onChangeSilla=this.onChangeSilla.bind(this)
+    this.state = {
+      silla: ''
+    }
+  }
+  // silla = React.createRef()
+
+  onChangeSilla(e){
+    this.state.silla=this.sillaRef.current.value
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+
+    const cambiar = {
+      silla: 0
+    }
+
+    console.log(cambiar);
+
+    axios.post('http://localhost:8080/api/avion', cambiar)
+        .then(res => console.log(res.data));
+
+    this.setState({
+      silla: ''
+    })
+  }
+
+  render() {
+    return (
+        <div>
+          <h3>Create New User</h3>
+          <form onSubmit={this.onSubmit}>
+            <div className="form-group">
+              <label>Username: </label>
+              <input  type="text"
+                      className="form-control"
+                      ref={this.sillaRef}
+                      value={this.state.silla}
+                      onChange={this.onChangeSilla}
+              />
+            </div>
+            <div className="form-group">
+              <input type="submit" value="Create Silla" className="btn btn-primary" />
+            </div>
+          </form>
+        </div>
+    )
+  }
 }
-
-export default App;

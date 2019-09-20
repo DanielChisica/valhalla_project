@@ -1,8 +1,27 @@
 const express = require  ('express')
 const router = express.Router()
 const vuelo = require('../modelo/modeloVuelo')
+//agregar POST (create)
+let avion = require('../modelo/avion');
 
-//agregar POST (create) 
+router.post('/avion',(req, res) => {
+    console.log('entra')
+    console.log(req.body.silla)
+    const nuevoAvion= new avion({
+        "nombre":"Boeing 747",
+        "sillas":[0]
+    })
+    nuevoAvion.save()
+    const silla = req.body.silla;
+    var clave = "sillas."+silla;
+    var json = { };
+    json[clave] = 1;
+    var actualizar = { $inc: json};
+    console.log(actualizar)
+    avion.findOneAndUpdate({nombre:"Boeing 747"},actualizar).then(
+            () => res.json('Avion actualizado!'))
+});
+
 
 router.post('/vuelo', (req, res, next) => {
     //db.collection.insert( documento )
