@@ -1,70 +1,89 @@
 {
   "planturisticoSuecia": [
     {
+      "categ":"S1",
       "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
-      "precio": 143447
-    },
+      "cantiPersonas": 3,
+      "precio": 300000     
+      },
     {
       "tour": "Excursión de un día sobre la historia vikinga desde Estocolmo con Uppsala",
-      "precio": 558045
+      "precio": 558045,
+      "cantiPersonas": 1
+     
     },
     {
       "tour": "tour privado de un día a Uppsala - Catedral de Uppsala, entierrosvikingos y campo",
+      "cantiPersonas": 1,
       "precio": 629769
     },
     {
       "tour": "Stockholm Pass",
+      "cantiPersonas": 1,
       "precio": 234064
     },
     {
       "tour": "Visita guiada al Museo Vasa",
+      "cantiPersonas": 1,
       "precio": 209932
     },
     {
       "tour": "Excursión histórica y paseo para conocer los fantasmas de Estocolmo",
+      "cantiPersonas": 1,
       "precio": 98795
     },
     {
       "tour": "Expedición Aurora en trineo de motos de nieve",
+      "cantiPersonas": 1,
       "precio": 313135
     },
     {
       "tour": "Malmô Tours - Cruzando el puente a Suecia",
+      "cantiPersonas": 1,
       "precio": 249841
     },
     {
       "tour": "Kattegattleden (Tour en bicicleta) (sur Helsenborg - norteGotemburg)",
+      "cantiPersonas": 1,
       "precio": 721618
     },
     {
       "tour": "Turismo en el archipiélago de Gotemburgo",
+      "cantiPersonas": 1,
       "precio": "Birka, ciudad de los vikingos - Visita a pie y en barco"
     },
     {
         "tour": "true/false",
+        "cantiPersonas": 1,
         "precio": "Birka, ciudad de los vikingos - Visita a pie y en barco"
     },
     {
         "tour": "Excursión histórica y paseo para conocer los fantasmas de Estocolmo",
+        "cantiPersonas": 1,
         "precio": 98795
       },
       {
         "tour": "Sydkustleden -Öresund (Helsenborg)",
+        "cantiPersonas": 1,
         "precio": 1110181
       },
       {
         "tour": "Recorrido clásico de un día por la península de Snæfellsnes desde Reikiavik",
+        "cantiPersonas": 1,
         "precio": 301678
       },
       {
         "tour": "Recorrido de senderismo por el glaciar Skaftafell para grupos pequenos",
+        "cantiPersonas": 1,
         "precio": 222036
       },
       {
         "tour": "Cueva de hielo de obsidiana junto al volcán Katla desde Vik",
+        "cantiPersonas": 1,
         "precio": 444072
       },{
         "tour": "Excursión de avistamiento de ballenas tradicional desde Húsavík",
+        "cantiPersonas": 1,
         "precio": 284947
       }
   ],
@@ -72,49 +91,61 @@
    [
   {
     "tour": "Recorrido clásico de un día por la península de Snæfellsnes desde Reikiavik",
+    "cantiPersonas": 1,
     "precio": 301678
   }, {
     "tour": "Gullfoss Canyon Rafting Adventure en el río Hvita",
+    "cantiPersonas": 1,
     "precio": 381162
   },
   {
     "tour": "Experiencia de buceo de superficie en Silfra Fissurea en el Parque Nacional Thingvellir",
+    "cantiPersonas": 1,
     "precio": 422979   
   },
   {
     "tour": "Reykjavík - Northern Lights en barco",
+    "cantiPersonas": 1,
     "precio": 240539
   },
   {
     "tour": " Vatnshellir Lava Cave Tour",
+    "cantiPersonas": 1,
     "precio": 99916
   },
   {
     "tour": "Excursión al cráter volcánico de Kerid y la Laguna Azul desde Reikiavik",
+    "cantiPersonas": 1,
     "precio": 444664
   },
   {
     "tour": "Laguna Secret",
+    "cantiPersonas": 1,
     "precio": 85114
   },
   {
     "tour": "Visite las cataratas de Seljalandsfoss y Skogafoss. Haga una parada en el pequeño pueblo de Vik",
+    "cantiPersonas": 1,
     "precio": 335235
   },
   {
     "tour": "Recorrido por la cueva de hielo del glaciar Langjökull desde Húsafell",
+    "cantiPersonas": 1,
     "precio": 521785
   },
   {
     "tour": "Escapada de un día al Círculo de Diamante desde Akureyri",
+    "cantiPersonas": 1,
     "precio": 532887
   },
   {
     "tour": "Excursión de un día a Landmannalauga",
+    "cantiPersonas": 1,
     "precio": 310851
   },
   {
     "tour": "Baños geotérmicos",
+    "cantiPersonas": 1,
     "precio": 125821
   }
 ],
@@ -123,41 +154,51 @@
    [
   {
     "tour": "Tarjeta de Helsinki",
+    "cantiPersonas": 1,
     "precio": 182677
   }, {
     "tour": "Helsinki en kayak",
+    "cantiPersonas": 1,
     "precio": 290792
   },
   {
     "tour": "Nuuksio Canoa y Caminata Aventura",
+    "cantiPersonas": 1,
     "precio": 290792
   },
   {
     "tour": "Hielo flotando en Forest Lake con Aurora Borealis",
+    "cantiPersonas": 1,
     "precio": 240539
   },
   {
     "tour": "Visita el Arctic Snow Hotel",
+    "cantiPersonas": 1,
     "precio": 369082
   },
   {
     "tour": "Safari de renos en Laponia desde Rovaniemi",
+    "cantiPersonas": 1,
     "precio": 444664
   },
   {
     "tour": "El mejor tour privado al zoológico con oso polar desde Rovaniemi",
+    "cantiPersonas": 1,
     "precio": 253511
   },
   {
     "tour": "* INVIERNO - Cascadas de hielo de Korouoma y senderismo en elparque nacional",
+    "cantiPersonas": 1,
     "precio": 667330
   },
   {
     "tour": "EXCURSION AL PUEBLO DE SANTA CLAUS",
+    "cantiPersonas": 1,
     "precio": 242327
   },
   {
     "tour": "Moto de nieve Northern Lights Safari de conducción",
+    "cantiPersonas": 1,
     "precio": 592768
   }
 ]

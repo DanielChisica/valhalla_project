@@ -2,6 +2,8 @@ const express = require  ('express')
 const router = express.Router()
 const vuelo = require('../modelo/modeloVuelo')
 const sillas = require('../modelo/modeloSillas')
+const destinos = require('../modelo/modeloDestinos')
+
 
 //agregar POST (create) 
 
@@ -19,6 +21,14 @@ router.get('/vuelo', (req, res, next) => {
     //db.collection.find()
   vuelo.find({  }).then((vuelo) => {
         res.send(vuelo)
+    }).catch(next)
+})
+
+//traigame todos los destinos
+router.get('/destinos', (req, res, next) => {
+    //db.collection.find()
+  destinos.find({  }).then((destinos) => {
+        res.send(destinos)
     }).catch(next)
 })
 
