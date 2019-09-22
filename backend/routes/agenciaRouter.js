@@ -3,27 +3,98 @@ const router = express.Router()
 const vuelo = require('../modelo/modeloVuelo')
 
 //agregar POST (create)
-let avion = require('../modelo/avion');
+const sillas = require('../modelo/modeloSillas')
 
-router.post('/avion',(req, res) => {
-    console.log('entra')
-    console.log(req.body.silla)
-    const nuevoAvion= new avion({
-        "nombre":"Boeing 747",
-        "sillas":[0]
-    })
-    nuevoAvion.save()
-    const silla = req.body.silla;
-    var clave = "sillas."+silla;
-    var json = { };
-    json[clave] = 1;
-    var actualizar = { $inc: json};
-    console.log(actualizar)
-    avion.findOneAndUpdate({nombre:"Boeing 747"},actualizar).then(
-            () => res.json('Avion actualizado!'))
+router.get('/crearSillas',(req, res) => {
+    const nuevasSillas= new sillas()
+
+    for(i=0;i<47;i++){
+        nuevasSillas.PrimeraClase.push(false)
+    }
+
+    for(i=0;i<93;i++){
+        nuevasSillas.Ejecutivo.push(false)
+    }
+
+    for(i=0;i<187;i++){
+        nuevasSillas.Economica.push(false)
+    }
+
+    for(i=0;i<140;i++){
+        nuevasSillas.Turistica.push(false)
+    }
+
+    nuevasSillas.save().then(()=>{
+        console.log(nuevasSillas._id)
+        res.send(nuevasSillas._id)
+    }
+    ).catch((err)=>{
+        console.log(err)
+        res.send(err)
+        }
+    )
 });
 
-const sillas = require('../modelo/modeloSillas')
+router.post('/sillas',(req, res) => {
+    console.log(req.body.PrimeraClase)
+    console.log(req.body.Ejecutivo)
+    console.log(req.body.Economica)
+    console.log(req.body.Turistica)
+
+    req.body.PrimeraClase.forEach((silla)=>{
+        var clave = "PrimeraClase."+silla;
+        var json = { };
+        json[clave] = true;
+        var actualizar = { $set: json};
+        console.log(actualizar)
+        sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
+            console.log('Silla actualizada')
+        }).catch((err)=>{
+            console.log(err)
+        })
+    })
+
+    req.body.Ejecutivo.forEach((silla)=>{
+        var clave = "Ejecutivo."+silla;
+        var json = { };
+        json[clave] = true;
+        var actualizar = { $set: json};
+        console.log(actualizar)
+        sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
+            console.log('Silla actualizada')
+        }).catch((err)=>{
+            console.log(err)
+        })
+    })
+
+    req.body.Economica.forEach((silla)=>{
+        var clave = "Economica."+silla;
+        var json = { };
+        json[clave] = true;
+        var actualizar = { $set: json};
+        console.log(actualizar)
+        sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
+            console.log('Silla actualizada')
+        }).catch((err)=>{
+            console.log(err)
+        })
+    })
+
+    req.body.Turistica.forEach((silla)=>{
+        var clave = "Turistica."+silla;
+        var json = { };
+        json[clave] = true;
+        var actualizar = { $set: json};
+        console.log(actualizar)
+        sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
+            console.log('Silla actualizada')
+        }).catch((err)=>{
+            console.log(err)
+        })
+    })
+
+    res.send("Avion actualizado")
+});
 
 router.post('/vuelo', (req, res, next) => {
     //db.collection.insert( documento )
