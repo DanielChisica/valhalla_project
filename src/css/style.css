@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Fira Code"; }
+
+body {
+  background-color: #f4f6fc;
+  color: #14193d; }
+
+ol {
+  list-style: none; }
+
+.zonas {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.sillas {
+  border-radius: 3px;
+  padding: 10px;
+  margin: 20px;
+  background-color: #14193d;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px; }
+
+.silla {
+  border-radius: 3px;
+  padding: 20px;
+  border: 1px solid;
+  transition: background-color 0.6s, border-radius 2.6s, clip-path 0.6s;
+  cursor: pointer; }
+
+.sillaTrue {
+  background-color: #43a047;
+  color: #14193d; }
+
+.sillaTrue:hover {
+  background-color: #aed581; }
+
+.sillaFalse {
+  border-radius: 40%;
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  background-color: #5e35b1; }
+
+.sillaFalse:hover {
+  background-color: #9575cd; }
+
+/*# sourceMappingURL=style.css.map */
