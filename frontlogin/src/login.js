@@ -18,9 +18,11 @@ class Login extends Component {
         <div>
             {
               user
-                ? <p>Hello, {user.displayName}</p>
+                ? <p>Hello, {user.email}</p>
                 : <p>Please sign in.</p>
+                
             }
+            
   
             {
               user
@@ -29,6 +31,7 @@ class Login extends Component {
             }
         </div>
       );
+      
     }
   }
 

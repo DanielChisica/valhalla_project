@@ -1,0 +1,68 @@
+{
+    "finlandia": [
+      {
+        "tipo":"automovil",
+        "idc" : "1f",
+        "modelo": "Automóvil Fisker Karma",
+        "year": 2012,
+        "marca": "Fisker",
+        "precio": 1148000,
+        "largeImage": "https://i5.walmartimages.com/asr/6876939c-6738-44c7-9766-e0f0793e98bb_1.4bbf838a2dc4fd0f7aa5ceae26b3df81.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff"
+        },
+        {
+        "tipo":"camioneta",
+        "idc" : "2f",
+        "modelo": "Automóvil Opel Cross land X",
+        "year": 2018,
+        "marca": "Opel",
+        "precio": 148000
+        },
+        {
+        "tipo":"automovil",
+        "idc" : "3f",
+        "modelo": "Automóvil Fisker Karma",
+        "year": 2012,
+        "marca": "Fisker",
+        "precio": 1148000
+        }
+    ],
+    "suecia": [
+        {
+          "tipo":"automovil",
+          "idc" : "1s",
+          "modelo": "Automóvil Saab 9-3",
+          "year": 2018,
+          "marca": "saab",
+          "precio": 100000
+          },
+          {
+          "tipo":"camioneta",
+          "idc" : "2s",
+          "modelo": "Camioneta Volvo V70",
+          "year": 2018,
+          "marca": "volvo",
+          "precio": 148000
+          }
+          
+      ],
+      "islandia": [
+        {
+          "tipo":"automovil",   
+          "idc" : "1i",
+          "modelo": "Automóvil Toyota Aygo",
+          "year": 2019,
+          "marca": "toyota",
+          "precio": 100000
+          },
+          {
+          "tipo":"camioneta",
+          "idc" : "2i",
+          "modelo": "Camioneta Dacia Duster",
+          "year": 2017,
+          "marca": "Dacia",
+          "precio": 148000
+          }
+      ]
+    
+  }
+  
