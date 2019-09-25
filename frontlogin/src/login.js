@@ -37,7 +37,9 @@ class Login extends Component {
               user
                 ? <p>Hello, {user.email}</p>
                 : <p>Please sign in.</p>
+                
             }
+            
   
             {
                 user
@@ -52,6 +54,7 @@ class Login extends Component {
             }
         </div>
       );
+      
     }
   }
 
