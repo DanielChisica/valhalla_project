@@ -3,6 +3,7 @@ const router = express.Router()
 const vuelo = require('../modelo/modeloVuelo')
 const sillas = require('../modelo/modeloSillas')
 const destinos = require('../modelo/modeloDestinos')
+const usuario= require('../modelo/usuario')
 
 
 //agregar POST (create) 
@@ -15,8 +16,26 @@ router.post('/vuelo', (req, res, next) => {
     }).catch(next)
 })
 
-//consultar -> get  - read
+router.post('/user', (req, res, next) => {
+    console.log('llega')
+    console.log(req.body)
+    const correo = req.body.correo;
+    const nombre = req.body.nombre;
+    console.log('-----')
+    const nuevoUsuario=new usuario(req.body)
+    consulta=''
+    usuario.findOne({ correo: correo }).then((resultado)=>{
+        consulta=resultado
+    }).catch(next)
+    if(consulta=''){
+        console.log(consulta)
+        nuevoUsuario.save()
+            .then(() => res.json('User added!'))
+            .catch(err => res.status(400).json('Error: ' + err));
+    }
+})
 
+//consultar -> get  - read
 router.get('/vuelo', (req, res, next) => {
     //db.collection.find()
   vuelo.find({  }).then((vuelo) => {
