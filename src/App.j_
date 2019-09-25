@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import Sillas from './components/App'
+//import silla from './components/Sillas'
+
 export default class Avion extends Component {
   sillaRef = React.createRef();
   constructor(props) {
     super(props);
-    this.onSubmit = this.onSubmit.bind(this);
-    this.onChangeSilla=this.onChangeSilla.bind(this)
+    this.onSubmit = this.onSubmit
+    this.onChangeSilla=this.onChangeSilla
     this.state = {
       silla: ''
     }
