@@ -6,6 +6,10 @@ import sillasJson from "../sillas.json";
 
 class Sillas extends Component {
     render() {
+        let setContadorA = 0
+ 
+
+
         return (
             <div className="zonas">
                 <ol className="sillas">
@@ -13,7 +17,7 @@ class Sillas extends Component {
                         <Silla
                             key={index}
                             silla={sillasJson.claseEconomicaA[index].silla}
-                            numero={index}
+                            numero={setContadorA++}
                         />
                     ))}
                 </ol>
@@ -22,7 +26,7 @@ class Sillas extends Component {
                         <Silla
                             key={index}
                             silla={sillasJson.claseEconomicaB[index].silla}
-                            numero={index}
+                            numero={setContadorA++}
                         />
                     ))}
                 </ol>
@@ -31,7 +35,7 @@ class Sillas extends Component {
                         <Silla
                             key={index}
                             silla={sillasJson.claseEconomicaC[index].silla}
-                            numero={index}
+                            numero={setContadorA++}
                         />
                     ))}
                 </ol>
