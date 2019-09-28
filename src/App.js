@@ -1,36 +1,38 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class Avion extends Component {
-  sillaRef = React.createRef();
+export default class CreateUser extends Component {
   constructor(props) {
     super(props);
+
+    this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.onChangeSilla=this.onChangeSilla.bind(this)
+
     this.state = {
-      silla: ''
+      username: ''
     }
   }
-  // silla = React.createRef()
 
-  onChangeSilla(e){
-    this.state.silla=this.sillaRef.current.value
+  onChangeUsername(e) {
+    this.setState({
+      username: e.target.value
+    })
   }
 
   onSubmit(e) {
     e.preventDefault();
 
-    const cambiar = {
-      silla: 0
+    const user = {
+      username: this.state.username
     }
 
-    console.log(cambiar);
+    console.log(user);
 
-    axios.post('http://localhost:8080/api/avion', cambiar)
+    axios.post('http://localhost:5000/users/add', user)
         .then(res => console.log(res.data));
 
     this.setState({
-      silla: ''
+      username: ''
     })
   }
 
@@ -42,14 +44,14 @@ export default class Avion extends Component {
             <div className="form-group">
               <label>Username: </label>
               <input  type="text"
+                      required
                       className="form-control"
-                      ref={this.sillaRef}
-                      value={this.state.silla}
-                      onChange={this.onChangeSilla}
+                      value={this.state.username}
+                      onChange={this.onChangeUsername}
               />
             </div>
             <div className="form-group">
-              <input type="submit" value="Create Silla" className="btn btn-primary" />
+              <input type="submit" value="Create User" className="btn btn-primary" />
             </div>
           </form>
         </div>

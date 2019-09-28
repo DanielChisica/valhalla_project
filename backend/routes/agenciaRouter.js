@@ -1,6 +1,10 @@
-const express = require  ('express')
-const router = express.Router()
-const vuelo = require('../modelo/modeloVuelo')
+const express = require  ('express');
+const router = express.Router();
+const vuelo = require('../modelo/modeloVuelo');
+const bodyParser = require('body-parser');
+const path = require('path');
+const nodemailer = require('nodemailer');
+const xoAuth2= require('xoauth2')
 
 //agregar POST (create)
 const sillas = require('../modelo/modeloSillas')
@@ -144,7 +148,50 @@ router.put('/sillas/:id', (req, res, next) => {
     }).catch(next)
 })
 
+router.post('/correo',(req,res,next)=>{
+    console.log(req.body.receptor)
+    console.log(req.body.ticket)
+    const mensaje = `
+    <h3>Confirmacion de los tiquetes</h3>
+    <br>
+    <p>Apreciado usuario, adjuntamos los tiquetes para que haga efectivo su vuelo, gracias por volar con nosotros</p>
+  `;
 
+    let transportador = nodemailer.createTransport({
+        service:'gmail',
+        auth: {
+            type: "OAuth2",
+            user: "valhallaairlines@gmail.com",
+            clientId: "124253551329-j2hkma0406pqmipr7iaq1olhhestpelf.apps.googleusercontent.com",
+            clientSecret: "44B_vEabuFVKAeLgUDTjIRK9",
+            refreshToken: "1/dlkv6QzhjjREl_S0-Nvfwuv7RvC23tiUMEj05nH0_FHsY6NXV0rKrU0mGqRXHVaZ"
+        }
+    });
+
+    // setup email data with unicode symbols
+    let mailOptions = {
+        from: '<valhallaairlines@gmail.com>', // sender address
+        to: req.body.receptor, // list of receivers
+        subject: 'Confirmacion de tiquetes', // Subject line
+        text: '', // plain text body
+        html: mensaje ,
+        attachments:[{
+            filename:'prueba.pdf',
+            path:__dirname+'/tickets/'+req.body.ticket
+        }]// html body
+    };
+
+    // send mail with defined transport object
+    transportador.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log('Hola '+error);
+        }
+        console.log('Mensaje enviado: %s', info.messageId);
+        console.log('URL: %s', nodemailer.getTestMessageUrl(info));
+
+        res.render('contact', {msg:'El mensaje ha sido enviado'});
+    });
+})
 
 
 //Eliminar - Delete
