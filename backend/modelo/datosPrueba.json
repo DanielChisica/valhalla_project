@@ -1,0 +1,80 @@
+{
+	
+    "fechaVuelo": {
+      "fechaSalida": "30/09/2019",
+      "horaSalida": "08:00",
+      "fechaLlegada": "31/09/2019",
+      "horaLlegada": "20:00",
+      "fechaSalidaVuelta": "31/10/2019",
+      "horaSalidaVuelta": "08:00",
+      "fechaLlegadaVuelta": "01/11/2019",
+      "horaLlegadaVuelta": "19:00"
+    },
+    "destino": {
+      "paisOrigen": "Bogota",
+      "aeropuertoDestino": "El dorado",
+      "paisOrigenVuelta": "Suecia",
+      "aeropuertoDestinoVuelta": "reikjavik"
+      },
+    "categoria": {
+      "tipoCategoria": "Ejecutiva",
+      "precioTiquete": 3000000,
+      "cantidadPasajerosAdultos": 4,
+      "cantidadPasajerosNinos": 2,
+      "valortotal": 4500000
+    },
+    "planTuristico": {
+      "suecia": ["S1"],
+      "finlandia": ["F1"],
+      "islandia": ["I1"]
+    },
+    "valorTotalPlan": {
+      "valorPlanturisticoSuma": 7200000
+    },
+    "hotel": {
+      "ciudadDestino": "Suecia",
+      "tipoAcomodacion": "Doble",
+      "valorHospedaje": 600000,
+      "habitaciones": 2, 
+      "adultos": 4,
+      "ninos": [2],
+         "servicios": ["Lavanderia"]
+    },
+    "alimentacion": {
+      "almuerzoYcena": true,
+      "Bufe": {
+        "suecia": ["SS1"],
+        "finlandia": ["FF1"],
+        "islandia": ["II1"]
+      },
+      "totalAlimentacon": 4800000
+    },
+    "bar": {
+      "Snaps": "Aguardiente de patatas condimentado con ajenjo",
+      "Glögg": "Vino caliente con azúcar con pasas y almendras",
+      "Fjallagrasa": "Moss Schnapps – basada en musgo de mar"
+    },
+    "alquilerVehiculo": {
+      "vehiculo": {
+        "tipo": "Sedan",
+        "marca": "Fisker",
+        "modelo": "Karma",
+        "dias": 3,
+        "valorAlquiler": 900000
+      }
+    },
+    "show":{
+        "suecia":["Show Suecia"],
+        "finlandia":["Show Fianlandia"],
+        "islandia":["Show Islandia"]
+    },
+  
+    "usuario":{
+    "usarioNombre":"Pepe", 
+    "usuarioApellido":"Remalas",
+    "password":"password",
+    "millasAcumuladas":85420000,
+    "correo":"valhallaairlines@gmail.com"      
+    	
+    }
+}

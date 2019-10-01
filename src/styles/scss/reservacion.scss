@@ -1,0 +1,339 @@
+$_1: #14193d;
+$_2: #f4f6fc;
+$_3: #d2d4df;
+$_4: #898ca1;
+$_5: #6a6d85;
+$_a: #43a047;
+$_e: #5e35b1;
+$_i: rgb(186, 30, 30);
+$_o: rgb(255, 255, 255);
+$_u: rgb(0, 0, 0);
+// Inspirate
+$_6: #ed5565;
+$_7: #da4453;
+$_8: #fc6e51;
+$_9: #e9573f;
+$_10: #ffce54;
+$_12: #f6bb42;
+$_13: #a0d468;
+$_14: #8cc152;
+$_15: #48cfad;
+$_16: #37bc9b;
+$_17: #4fc1e9;
+$_18: #3bafda;
+$_19: #5d9cec;
+$_20: #4a89dc;
+$_21: #ac92ec;
+$_22: #967adc;
+$_23: #ec87c0;
+$_24: #d770ad;
+$_25: #f5f7fa;
+$_26: #e6e9ed;
+$_27: #ccd1d9;
+$_28: #aab2bd;
+$_29: #656d78;
+$_30: #434a54;
+$_circulo: #ac92ec;
+
+.reservacion {
+    margin: 30px;
+    padding: 10px;
+    width: 80%;
+    justify-self: center;
+    position: relative;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+    transition-duration: .2;
+    overflow: auto;
+
+    >.formulario {
+        background-color: $_2;
+        margin: 0 50px;
+        padding: 20px 0;
+        position: relative;
+        z-index: 2;
+        // display: flex;
+
+        >.formulario-textboxs {
+            width: 60%;
+            float: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            >input[type="text"] {
+                width: 80%;
+                border: 1px solid $_3;
+                border-radius: 5px;
+                padding: 8px 15px;
+                margin: 0 0 20px 0;
+                text-align: left;
+                font-size: 17px;
+                color: $_5;
+                transition-duration: .25s;
+                font-weight: 400;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.4);
+                }
+
+                &:focus {
+                    background-color: $_2;
+                    color: $_5;
+                    font-weight: 500;
+                }
+            }
+
+            label {
+                color: $_5;
+                text-transform: uppercase;
+                letter-spacing: .3px;
+                font-size: 13px;
+                font-weight: 500;
+                text-align: left;
+            }
+
+            .radio {
+                position: relative;
+                cursor: pointer;
+                font-size: 15px;
+                margin: 0 0 20px 0;
+
+                .label {
+                    position: relative;
+                    top: 4px;
+                    display: inline-block;
+                    margin-right: 15px;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid $_4;
+                    border-radius: 100%;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        background: $_circulo;
+                        transition: all .2s ease;
+                        opacity: .08;
+                        pointer-events: none;
+                    }
+                }
+
+                &:hover {
+                    .label {
+                        &:after {
+                            transform: scale(4.6);
+                        }
+                    }
+                }
+
+                input[type="radio"] {
+                    &:checked {
+                        &+.label {
+                            &:after {
+                                transform: scale(2);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                input[type="radio"].hidden {
+                    display: none;
+                }
+            }
+        }
+
+        >.hotel-reserva {
+            // position: absolute;
+            // top: 20px;
+            // right: 50px;
+            background-color: $_2;
+            max-width: 300px;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.47), 0 10px 23px rgba(0, 0, 0, 0.2);
+            // float: right;
+            display: inline-block;
+
+            >.habitacion-adultos-ninos {
+                display: flex;
+                margin: 5% 0;
+
+                >.contenido-izquierda {
+                    width: 100%;
+                    text-align: left;
+                    padding: 10px;
+
+                    >span {
+                        color: $_u;
+                        position: relative;
+                        z-index: 1;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            top: -10px;
+                            left: -10px;
+                            background-color: $_circulo;
+                            width: 2.5em;
+                            height: 2.5em;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                >.contenido-derecha {
+                    color: $_u;
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1.2fr 1fr;
+
+                    >.comun {
+                        border: 1px solid $_3;
+                        cursor: pointer;
+
+                        .icono {
+                            content: "";
+                            background-position: center;
+                            background-size: 50%;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            width: 50%;
+                            height: 100%;
+                        }
+                    }
+
+                    >.suma {
+                        >.icono {
+                            background-image: url("../../images/icons/icons8-menos-36.png");
+                        }
+                    }
+
+                    >.cero {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: inset 0 3px 3px -3px rgba(0, 0, 0, 0.25);
+                    }
+
+                    >.menos {
+                        >.icono {
+                            background-image: url("../../images/icons/add.png");
+                        }
+                    }
+                }
+            }
+
+            >.niño {
+                background-color: $_u;
+                display: flex;
+                margin: 5% 0;
+
+                >.contenido-izquierda {
+                    color: $_3;
+                    width: 100%;
+                    text-align: left;
+                    padding: 10px;
+
+                    // > label {
+                    //     color: $_3;
+                    //     position: relative;
+                    //     z-index: 1;
+
+                    //     &:before {
+                    //         content: "";
+                    //         position: absolute;
+                    //         z-index: -1;
+                    //         top: -10px;
+                    //         left: -10px;
+                    //         background-color: $_circulo;
+                    //         width: 2.5em;
+                    //         height: 2.5em;
+                    //         border-radius: 50%;
+                    //     }
+                    // }
+                }
+
+                >.contenido-derecha {
+                    width: 50%;
+                    border-left: 1px solid $_3;
+                    display: flex;
+                    position: relative;
+
+                    >select {
+                        appearance: none;
+                        outline: 0;
+                        box-shadow: none;
+                        border: 0;
+                        background-color: $_u;
+                        flex: 1;
+                        padding: 0 15%;
+                        color: #fff;
+                        cursor: pointer;
+
+                        &::-ms-expand {
+                            display: none;
+                        }
+                    }
+
+                    &::after {
+                        content: "\25BC";
+                        color: $_2;
+                        position: absolute;
+                        top: 25%;
+                        right: 0;
+                        padding: 0 15%;
+                        cursor: pointer;
+                        pointer-events: none;
+                        transition: 0.25s all ease;
+                    }
+
+                    &:hover {
+                        &::after {
+                            color: $_circulo;
+                            ;
+                        }
+                    }
+                }
+
+                // > .edadesNino {
+                //     background-color: rgb(255, 255, 255);
+                //     width: 50px;
+                //     position: relative;
+                //     left: 130px;
+                //     margin: 10px;
+                //     > .edadNino {
+                //         display: flex;
+                //         justify-content: center;
+                //         text-align-last: center;
+                //     }
+                // }
+            }
+        }
+
+        button {
+            // float: none;
+            display: block;
+            background-color: rebeccapurple;
+            border: 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            // width: 100%;
+            // width: 250px;
+            cursor: pointer;
+            transition-duration: .25s;
+
+            &:hover {
+                background-color: black;
+                color: $_2;
+            }
+        }
+    }
+}

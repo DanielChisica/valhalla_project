@@ -1,569 +1,477 @@
 {
-    "claseEconomicaA": [
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        }
+    "Ejecutivo": [
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true }
     ],
-    "claseEconomicaB": [
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        }
+    "PrimeraClase": [
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true }
     ],
-    "claseEconomicaC": [
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": false
-        },
-        {
-            "silla": true
-        },
-        {
-            "silla": true
-        }
+    "Economica": [
+        { "silla": false },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": false },
+        { "silla": true },
+        { "silla": false }
+    ],
+    "Turistica": [
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true },
+        { "silla": true }
     ]
 }

@@ -1,0 +1,184 @@
+@charset "UTF-8";
+.reservacion {
+  margin: 30px;
+  padding: 10px;
+  width: 80%;
+  justify-self: center;
+  position: relative;
+  border-radius: 2px;
+  background-color: #f9f9f9;
+  transition-duration: .2;
+  overflow: auto; }
+  .reservacion > .formulario {
+    background-color: #f4f6fc;
+    margin: 0 50px;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2; }
+    .reservacion > .formulario > .formulario-textboxs {
+      width: 60%;
+      float: left;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .reservacion > .formulario > .formulario-textboxs > input[type="text"] {
+        width: 80%;
+        border: 1px solid #d2d4df;
+        border-radius: 5px;
+        padding: 8px 15px;
+        margin: 0 0 20px 0;
+        text-align: left;
+        font-size: 17px;
+        color: #6a6d85;
+        transition-duration: .25s;
+        font-weight: 400; }
+        .reservacion > .formulario > .formulario-textboxs > input[type="text"]:hover {
+          background-color: rgba(255, 255, 255, 0.4); }
+        .reservacion > .formulario > .formulario-textboxs > input[type="text"]:focus {
+          background-color: #f4f6fc;
+          color: #6a6d85;
+          font-weight: 500; }
+      .reservacion > .formulario > .formulario-textboxs label {
+        color: #6a6d85;
+        text-transform: uppercase;
+        letter-spacing: .3px;
+        font-size: 13px;
+        font-weight: 500;
+        text-align: left; }
+      .reservacion > .formulario > .formulario-textboxs .radio {
+        position: relative;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 0 0 20px 0; }
+        .reservacion > .formulario > .formulario-textboxs .radio .label {
+          position: relative;
+          top: 4px;
+          display: inline-block;
+          margin-right: 15px;
+          width: 20px;
+          height: 20px;
+          border: 1px solid #898ca1;
+          border-radius: 100%; }
+          .reservacion > .formulario > .formulario-textboxs .radio .label:after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background: #ac92ec;
+            transition: all .2s ease;
+            opacity: .08;
+            pointer-events: none; }
+        .reservacion > .formulario > .formulario-textboxs .radio:hover .label:after {
+          transform: scale(4.6); }
+        .reservacion > .formulario > .formulario-textboxs .radio input[type="radio"]:checked + .label:after {
+          transform: scale(2);
+          opacity: 1; }
+        .reservacion > .formulario > .formulario-textboxs .radio input[type="radio"].hidden {
+          display: none; }
+    .reservacion > .formulario > .hotel-reserva {
+      background-color: #f4f6fc;
+      max-width: 300px;
+      min-width: 300px;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.47), 0 10px 23px rgba(0, 0, 0, 0.2);
+      display: inline-block; }
+      .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos {
+        display: flex;
+        margin: 5% 0; }
+        .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-izquierda {
+          width: 100%;
+          text-align: left;
+          padding: 10px; }
+          .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-izquierda > span {
+            color: black;
+            position: relative;
+            z-index: 1; }
+            .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-izquierda > span:before {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              top: -10px;
+              left: -10px;
+              background-color: #ac92ec;
+              width: 2.5em;
+              height: 2.5em;
+              border-radius: 50%; }
+        .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-derecha {
+          color: black;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1.2fr 1fr; }
+          .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-derecha > .comun {
+            border: 1px solid #d2d4df;
+            cursor: pointer; }
+            .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-derecha > .comun .icono {
+              content: "";
+              background-position: center;
+              background-size: 50%;
+              background-repeat: no-repeat;
+              display: inline-block;
+              width: 50%;
+              height: 100%; }
+          .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-derecha > .suma > .icono {
+            background-image: url("../../images/icons/icons8-menos-36.png"); }
+          .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-derecha > .cero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 3px 3px -3px rgba(0, 0, 0, 0.25); }
+          .reservacion > .formulario > .hotel-reserva > .habitacion-adultos-ninos > .contenido-derecha > .menos > .icono {
+            background-image: url("../../images/icons/add.png"); }
+      .reservacion > .formulario > .hotel-reserva > .niño {
+        background-color: black;
+        display: flex;
+        margin: 5% 0; }
+        .reservacion > .formulario > .hotel-reserva > .niño > .contenido-izquierda {
+          color: #d2d4df;
+          width: 100%;
+          text-align: left;
+          padding: 10px; }
+        .reservacion > .formulario > .hotel-reserva > .niño > .contenido-derecha {
+          width: 50%;
+          border-left: 1px solid #d2d4df;
+          display: flex;
+          position: relative; }
+          .reservacion > .formulario > .hotel-reserva > .niño > .contenido-derecha > select {
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            border: 0;
+            background-color: black;
+            flex: 1;
+            padding: 0 15%;
+            color: #fff;
+            cursor: pointer; }
+            .reservacion > .formulario > .hotel-reserva > .niño > .contenido-derecha > select::-ms-expand {
+              display: none; }
+          .reservacion > .formulario > .hotel-reserva > .niño > .contenido-derecha::after {
+            content: "\25BC";
+            color: #f4f6fc;
+            position: absolute;
+            top: 25%;
+            right: 0;
+            padding: 0 15%;
+            cursor: pointer;
+            pointer-events: none;
+            transition: 0.25s all ease; }
+          .reservacion > .formulario > .hotel-reserva > .niño > .contenido-derecha:hover::after {
+            color: #ac92ec; }
+    .reservacion > .formulario button {
+      display: block;
+      background-color: rebeccapurple;
+      border: 0;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition-duration: .25s; }
+      .reservacion > .formulario button:hover {
+        background-color: black;
+        color: #f4f6fc; }
+
+/*# sourceMappingURL=reservacion.css.map */

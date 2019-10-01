@@ -1,0 +1,81 @@
+$_1: #14193d;
+$_2: #f4f6fc;
+$_3: #d2d4df;
+$_4: #898ca1;
+$_5: #6a6d85;
+$_a: #43a047;
+$_e: #5e35b1;
+$_i: rgb(186, 30, 30);
+$_o: rgb(255, 255, 255);
+$_u: rgb(0, 0, 0);
+
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: "Fira Code";
+}
+
+body {
+    background-color: $_3;
+}
+
+ol {
+    list-style: none;
+}
+
+.zonas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: $_o;
+}
+
+.sillas {
+    border-radius: 3px;
+    padding: 10px;
+    margin: 20px;
+    background-color: $_1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.silla {
+    border-radius: 3px;
+    padding: 20px;
+    border: 1px solid;
+    transition: background-color 0.6s, border-radius 0.6s, clip-path 0.6s;
+    cursor: pointer;
+}
+
+.sillaTrue {
+    background-color: $_a;
+    color: $_1;
+}
+
+.sillaTrue:hover {
+    background-color: #aed581;
+}
+
+.sillaFalse {
+    clip-path: polygon(0 0, 0% 20%, 0 50%, 0% 80%, 0 100%, 50% 100%, 100% 100%, 100% 80%, 100% 50%, 100% 20%, 100% 0, 50% 0);
+    background-color: $_a;
+    animation: magia .5s both;
+}
+
+@keyframes magia {
+    to {
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        background-color: $_e;
+    }
+}
+
+.sillaFalse:hover {
+    background-color: #9575cd;
+}
+
+hr {
+    border: 1px solid $_u;
+}
