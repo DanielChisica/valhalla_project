@@ -1,11 +1,15 @@
 const express = require  ('express');
 const router = express.Router();
 const vuelo = require('../modelo/modeloVuelo');
+<<<<<<< HEAD
 const sillas = require('../modelo/modeloSillas')
+=======
+>>>>>>> 1ffbde7c0610f10d2c003cc6cd8bc813003a546a
 const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const xoAuth2= require('xoauth2')
+<<<<<<< HEAD
 
 
 const destinos = require('../modelo/modeloDestinos')
@@ -30,6 +34,8 @@ router.post('/todo', (req, res, next) => {
     }).catch(next)
 })
 
+=======
+>>>>>>> 1ffbde7c0610f10d2c003cc6cd8bc813003a546a
 
 //agregar POST (create)
 
