@@ -18,6 +18,7 @@ const usuarioSchema= new Schema({
     }
 
 usuarioSchema.pre('save',function(next){
+    if (!this.isModified('password')) return next()
     let usuario=this
     console.log(usuario)
     bcryptjs.hash(usuario.contrasena,null,null,(err,hash)=>{
