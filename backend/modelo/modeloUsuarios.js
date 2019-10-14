@@ -9,6 +9,7 @@ const usuarioSchema= new Schema({
     cc:Number,
     correo: {type:String, unique:true, lowercase:true},
     contrasena: {type: String, select:false},
+    millas: Number
 })
 
     usuarioSchema.methods.compareContrasena = function (contrasenaCandidata, cb) {

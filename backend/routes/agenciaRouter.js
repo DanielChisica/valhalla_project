@@ -260,12 +260,17 @@ router.delete('/vuelo/:id', (req, res, next) => {
     }).catch(next)
 });
 
-// anidado
-router.get('/sillas/anidado', (req, res, next) => {
+
+// Traer sillas
+router.get('/traersillas', (req, res, next) => {
     //db.collection.find()
-  sillas.find({  }).then((vuelo) => {
-        res.send(vuelo)
+  sillas.find({ _id:'5da3f96c53ee5823043e2460'}).then((vuelo) => {
+        res.send(vuelo[0])
     }).catch(next)
 })
+
+
+
+
 
 module.exports = router

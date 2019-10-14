@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 
 import Silla from "./Silla";
+import Axios from "axios";
 
-import sillasJson from "../../sillas.json";
+//import sillasJson from "../../sillas.json";
+
 
 class Sillas extends Component {
     state = {
@@ -32,6 +34,19 @@ class Sillas extends Component {
     }
 
     actualizador = () => {
+        let sillasJson = '';
+
+        Axios.get('http://localhost:8080/api/traersillas')
+            .then((response) => {
+                sillasJson = response
+                console.log(sillasJson);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        
+
         let claseJson;
         //! FALTA SILLAS VIP
         switch (this.state.clase) {
@@ -103,42 +118,42 @@ class Sillas extends Component {
         return this.state.clase === String ? (
             <></>
         ) : (
-            <>
-                <h1>Boeing 747 - {this.state.clase}</h1>
-                <div className="zonas">
-                    <ol className="sillas">
-                        {Object.keys(this.state.zonaA).map(i => (
-                            <Silla
-                                key={i}
-                                silla={this.state.zonaA[i]}
-                                numero={`a${i}`}
-                                sillasElegidas={this.sillasElegidas}
-                            />
-                        ))}
-                    </ol>
-                    <ol className="sillas">
-                        {Object.keys(this.state.zonaB).map(i => (
-                            <Silla
-                                key={i}
-                                silla={this.state.zonaB[i]}
-                                numero={`b${i}`}
-                                sillasElegidas={this.sillasElegidas}
-                            />
-                        ))}
-                    </ol>
-                    <ol className="sillas">
-                        {Object.keys(this.state.zonaC).map(i => (
-                            <Silla
-                                key={i}
-                                silla={this.state.zonaC[i]}
-                                numero={`c${i}`}
-                                sillasElegidas={this.sillasElegidas}
-                            />
-                        ))}
-                    </ol>
-                </div>
-            </>
-        );
+                <>
+                    <h1>Boeing 747 - {this.state.clase}</h1>
+                    <div className="zonas">
+                        <ol className="sillas">
+                            {Object.keys(this.state.zonaA).map(i => (
+                                <Silla
+                                    key={i}
+                                    silla={this.state.zonaA[i]}
+                                    numero={`a${i}`}
+                                    sillasElegidas={this.sillasElegidas}
+                                />
+                            ))}
+                        </ol>
+                        <ol className="sillas">
+                            {Object.keys(this.state.zonaB).map(i => (
+                                <Silla
+                                    key={i}
+                                    silla={this.state.zonaB[i]}
+                                    numero={`b${i}`}
+                                    sillasElegidas={this.sillasElegidas}
+                                />
+                            ))}
+                        </ol>
+                        <ol className="sillas">
+                            {Object.keys(this.state.zonaC).map(i => (
+                                <Silla
+                                    key={i}
+                                    silla={this.state.zonaC[i]}
+                                    numero={`c${i}`}
+                                    sillasElegidas={this.sillasElegidas}
+                                />
+                            ))}
+                        </ol>
+                    </div>
+                </>
+            );
     }
 }
 

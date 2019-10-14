@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const todoSchema = new Schema({ 
+const todoSchema = new Schema({
     "fechaVuelo": {
       "fechaSalida": String,
       "horaSalida": String,
@@ -37,7 +37,7 @@ const todoSchema = new Schema({
       "ciudadDestino": String,
       "tipoAcomodacion": String,
       "valorHospedaje": Number,
-      "habitaciones": Number, 
+      "habitaciones": Number,
       "adultos": Number,
       "ninos": Array,
          "servicios": Array
@@ -70,18 +70,19 @@ const todoSchema = new Schema({
         "finlandia":Array,
         "islandia":Array
     },
-  
+
     "usuario":{
-    "usarioNombre":String, 
+    "usuarioNombre":String,
     "usuarioApellido":String,
+    "Cedula":String,
     "password":String,
     "millasAcumuladas":Number,
-    "correo":String      
+    "correo":String
   }
-  
+
 })
 //variable modelo = mongoose.model('collection', plantillaconllention)
-// va crear una coleccion ques se llame todo y todoSechema es el esquema 
-const Todo = mongoose.model('agencia', todoSchema) 
+// va crear una coleccion ques se llame todo y todoSechema es el esquema
+const Todo = mongoose.model('agencia', todoSchema)
 
 module.exports = Todo
