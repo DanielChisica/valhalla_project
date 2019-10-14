@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import Silla from "./Silla";
 import Axios from "axios";
 
-//import sillasJson from "../../sillas.json";
-
 
 class Sillas extends Component {
     state = {
@@ -38,20 +36,20 @@ class Sillas extends Component {
 
         Axios.get('http://localhost:8080/api/traersillas')
             .then((response) => {
-                sillasJson = response
+                sillasJson = response.data
                 console.log(sillasJson);
             })
             .catch((error) => {
                 console.log(error);
             });
 
-        
-
-        let claseJson;
+        let claseJson='';
         //! FALTA SILLAS VIP
         switch (this.state.clase) {
             case "Ejecutivo":
                 claseJson = sillasJson.Ejecutivo;
+                console.log(sillasJson.Ejecutivo)
+                console.log(claseJson)
                 break;
             case "PrimeraClase":
                 claseJson = sillasJson.PrimeraClase;
@@ -65,7 +63,7 @@ class Sillas extends Component {
             default:
                 break;
         }
-
+        console.log(this.state.clase)
         function distribuir(num) {
             let redondeado = Math.floor(num / 3);
             let sumaRedondeado = redondeado * 3;
