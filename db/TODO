@@ -1,0 +1,199 @@
+Pendientes:
+
+                                 /|
+                                    \\  \`.
+    _      _   _   _           ,'/  ||   ) `.                _        _
+   |_) |  / \ / \ | \        ,' (   //,-'_,-'    ,   |\  /| / \ |\ | |_ \ /
+   |_) |_ \_/ \_/ |_/  .    `-._`-.  |  (_____,-'/   | \/ | \_/ | \| |_  |
+                       \`-._____)  | | ,-'-.    /
+                        \    ,-'-. | |/     ) ,'
+                         `. (     \|     _,','
+                           `.`._
+
+manejar del lado del FrontEnd NO BORRAR
+
+//////////////////////////////////// VUELOS
+{
+  "clienteInfo": {
+    "habitaciones": 4,
+    "adultos": 4,
+    "ninos": [
+      0,
+      3,
+      12
+    ]
+  },
+  "selectedAgePicker": null,
+  "showErrors": false
+}
+
+{
+  "onSelection": "fn()",
+  "guestInfo": {
+    "rooms": 1,
+    "adults": 2,
+    "children": "Array[0]"
+  },
+  "guestValidation": {
+    "limits": "Object",
+    "isValid": "e()",
+    "validate": "e()"
+  },
+  "onClose": "fn()"
+}
+
+☐ No cambiar el vualo hasta que este lleno
+"vuelo": "AV896+1",
+
+☐ deacuerdo al destino hacer la consulta del json para mostrar en planes turisticos
+
+☐ 72 horas de cancelacion TODO o hotel, vuelo, planes
+
+// smörgåsbord - Bufé de 40 platos, varios
+// tipos de pan y mantequilla
+// platos fríos como arenque
+// salmón,kothbullar (albóndigas suecas),
+// salchichas y paté, Janssons frestelse
+// (anchoas con patatas)
+// kroppkakor - bolas de patatas rellenas (cerdo, cebolla, setas o
+// tocineta)
+// raggmunk - crepe de patas con tocineta a la plancha y arándanos
+// rojos
+// Strömmingslådor - guiso de arenque
+// gravad lax - salmón crudo en eneldo con salsa de mostaza
+// Smörgåstårta - torta de jamón, camarones, huevos, atún
+// https://www.google.com/flights?lite=0#flt=BOG..2019-10-06*.BOG.2019-10-10;c:COP;e:1;a:AV*AV;sd:1;t:h
+
+Millas:
+    ☐ -> Suecia = 6,020
+    ☐ -> Islandia = 4,850
+    ☐ -> Finlandia = 6,250
+
+Kilómetros:
+    ☐ -> Suecia = 9,688 KM
+    ☐ -> Islandia = 7,805 KM
+    ☐ -> Finlandia = 10, 058 KM
+
+Duración:
+
+    ☐ -> Suecia = 10 Horas 20 minutos
+    ☐ -> Islandia = 8 Horas 30 minutos
+    ☐ -> Finlandia = 10 Horas 50 minutos
+
+Diferencia Horaria relación Colombia:
+    ☐ -> Islandia + 5 Horas
+    ☐ -> Suecia + 7 Horas
+    ☐ -> Finlandia + 8 Horas
+
+    //////////////////////////////////// HOTEL
+    Valhalla Hotel (Basado en el hotel Brommavik de Suecia) https://brommavik-hotel.hotelistockholm.com/es/
+
+
+    https://www.tripadvisor.co/Hotel_Review-g230088-d2064715-Reviews-Brommavik_Hotel-Bromma.html
+// Extencion de google Wallpalyzer => Ver las tegnologias de las paginas web
+    Hotel 4 Estrellas
+    Inglés, sueco, finés / suomi, islandés, español
+    Parqueadero gratis
+    Sauna
+    Sala de reuniones
+    almacenamiento de equipajes
+    Internet de alta velocidad gratuito
+    Desayuno tipo bufé gratis durante la estadía
+
+
+/////////////////////////////////////////// USUARIO
+y descuento por millas
+
+
+
+
+
+✔ Categoria: @done(19-09-19 23:13)
+        ✔ Reykjavik (islandia): @done(19-09-19 23:13)
+        ✔ Primera Clase $54.957.616 @done(19-09-19 23:13)
+        ✔ Ejecutivo $11.501.997 @done(19-09-19 23:13)
+        ✔ Económica $8.842.270 @done(19-09-19 23:13)
+        ✔ Turista $3.172.230 @done(19-09-19 23:13)
+✔ @done(19-09-19 23:13)
+        ✔ fin de año = 31/12/1999-> +3'000.000 @done(19-09-19 23:13)
+        ✔ principio de año =02/01/1999-> -1'500.000 @done(19-09-19 23:13)
+        ✔ verano (21/06/1999 - 23/09/1999) -> +5'000.000 @done(19-09-19 23:13)
+✔ @done(19-09-19 23:13)
+        ✔ Estocolmo (suecia): @done(19-09-19 23:13)
+            ✔ Primera Clase $34.547.808 @done(19-09-19 23:13)
+            ✔ Ejecutivo $10.420.143 @done(19-09-19 23:13)
+            ✔ Económica $8.355.150 @done(19-09-19 23:13)
+            ✔ Turista $4.209.940 @done(19-09-19 23:13)
+✔ @done(19-09-19 23:13)
+            ✔ fin de año = 31/12/1999-> +3'000.000 @done(19-09-19 23:13)
+            ✔ principio de año =02/01/1999-> -1'500.000 @done(19-09-19 23:13)
+            ✔ verano (21/06/1999 - 23/09/1999) -> +5'000.000 @done(19-09-19 23:13)
+✔ @done(19-09-19 23:13)
+        ✔ Helsinki (finlandia): @done(19-09-19 23:13)
+            ✔ Primera Clase $34.407.944 @done(19-09-19 23:13)
+            ✔ Ejecutivo $10.278.856 @done(19-09-19 23:13)
+            ✔ Económica $5.785.440 @done(19-09-19 23:13)
+            ✔ Turista $5.127.230 @done(19-09-19 23:13)
+✔ @done(19-09-19 23:13)
+            ✔ fin de año = 31/12/1999-> +3'000.000 @done(19-09-19 23:13)
+            ✔ principio de año =02/01/1999-> -1'500.000 @done(19-09-19 23:13)
+            ✔ verano (21/06/1999 - 23/09/1999) -> +5'000.000 @done(19-09-19 23:13)
+
+
+
+Aeronave:
+    ☐ Boeing 747
+    Capacidad total 467 pasajeros:
+        ☐ Primera Clase - 47 pasajeros
+        ☐ Ejecutivo - 93 pasajeros
+        ☐ Económica - 187 pasajeros
+        ☐ Turista - 140 pasajeros
+Velocidad aeronave: 15.000 km
+
+Archive:
+
+
+
+
+
+Projects:
+    ☐ Anything with a colon at the end of the line is a project
+    ☐ Projects will show some statistics next to them @1h
+    ✔ By default those statistics are the number of pending todos and the sum of their time estimates @30m
+Nested:
+    ☐ You can nest projects inside each other and fold them
+
+Todos:
+    You can write plain text notes/descriptions wherever you want
+New:
+    ☐ Press Cmd/Ctrl+Enter to add a new todo
+Done:
+    ✔ Press Alt+D to mark a todo as done
+    ✔ Press it again to undo the action
+Cancelled:
+    ✘ Press Alt+C to mark a todo as cancelled
+    ✘ Press it again to undo the action
+Tagging:
+    ☐ You can add tags using the @ symbol, like this @tag
+    ☐ There are some special, customizable tags: @critical @high @low @today
+Timekeeping:
+    ✔ Completed todos can show a timestamp @done(17-11-03 10:42)
+    ✔ Press Alt+S to mark a todo as started @started(17-11-03 10:42) @done(19-09-19 23:11) @lasted(1y45w5d12h29m42s)
+    ✔ Now it will show the elapsed time @started(17-11-03 10:42) @done(17-11-03 20:11) @lasted(9h29m)
+    ☐ You can provide time estimates for your todos @1h30m
+    ☐ We are even doing some natural language processing @est(1 day and 20 minutes)
+
+Formatting:
+    You can format text in a markdown-like fashion
+Bold:
+    ☐ Use asterisks for *bold*
+Italic:
+    ☐ Use underscores for _italic_
+Strikethrough:
+    ☐ Use tildes for ~strikethrough~
+Code:
+    ☐ Use backticks for `code`
+
+Archive:
+    ✔ You can archive finished todos here
+    ✔ Congratulations, you are now a Todo+ master!

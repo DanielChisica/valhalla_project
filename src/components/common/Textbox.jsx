@@ -4,7 +4,7 @@ class TextBox extends Component {
     render() {
         return (
             <>
-                <input type="text" placeholder={this.props.titulo} />
+                <input type={this.props.tipo} placeholder={this.props.titulo} />
             </>
         );
     }

@@ -2,24 +2,80 @@ import React, { Component } from "react";
 
 import Sillas from "./sillas/Sillas";
 import Reservacion from "./reservacion/Reservacion";
-// import Fecha from "./common/Fecha";
+import Fecha from "./common/Fecha";
+import Comida from "./reservacion/Comida";
+
+//* Common
+import TextBox from "./common/Textbox";
+import Boton from "./common/Boton";
+import Popup from "./common/Popup";
 
 class App extends Component {
     state = {
-        clase: String
+        clase: String,
+        mostrarSillas: false,
+        mostrarLogin: false,
+        sillasCompradas: []
     };
 
-    resultado = dato => {
+    clase = dato => {
         this.setState({ clase: dato });
+    };
+
+    mostrarSillas = dato => {
+        this.setState({ mostrarSillas: dato });
+    };
+
+    iniciarSesion = () => {
+        this.setState({ mostrarLogin: true });
     };
 
     render() {
         return (
-            <React.Fragment>
+            <>
+                <Boton titulo="Iniciar sesion" funcion={this.iniciarSesion} />
+
+                <div className="fechaviaje">
+                    <h1>Fecha Viaje</h1>
+                    <Fecha />
+                </div>
+                
+                <Popup
+                    mostrar={this.state.mostrarLogin}
+                    ocultar={e => {
+                        this.setState({ mostrarLogin: false });
+                    }}
+                >
+                    <h1>Iniciar sesion</h1>
+                    <div className="inicio">
+                        <TextBox tipo="text" titulo="Correo" />
+                        <TextBox tipo="password" titulo="Contraseña" />
+                    </div>
+                    <h1>No tienes cuenta? Creala</h1>
+                </Popup>
+
                 {/* <Fecha /> */}
-                <Reservacion resultado={this.resultado} />
-                <Sillas clase={this.state.clase} />
-            </React.Fragment>
+                <Reservacion
+                    resultado={this.clase}
+                    mostrarSillas={this.mostrarSillas}
+                    sillasCompradas={this.state.sillasCompradas}
+                />
+                <Popup
+                    mostrar={this.state.mostrarSillas}
+                    ocultar={e => {
+                        this.setState({ mostrarSillas: false });
+                    }}
+                >
+                    <Sillas
+                        clase={this.state.clase}
+                        sillasElegidas={e => {
+                            this.setState({ sillasCompradas: e });
+                        }}
+                    />
+                </Popup>
+                <Comida />
+                {/* <Sillas clase={this.state.clase} /> */}
+            </>
         );
     }
 }

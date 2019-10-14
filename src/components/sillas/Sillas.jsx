@@ -7,6 +7,7 @@ import sillasJson from "../../sillas.json";
 class Sillas extends Component {
     state = {
         clase: String,
+        sillasElegidas: [],
         zonaA: [],
         zonaB: [],
         zonaC: []
@@ -14,59 +15,91 @@ class Sillas extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.clase !== prevProps.clase) {
-            this.setState({ zonaA: [], zonaB: [], zonaC: [] }, () => {
-                this.actualizador();
-            });
+            this.setState(
+                {
+                    clase: this.props.clase,
+                    sillasElegidas: [],
+                    zonaA: [],
+                    zonaB: [],
+                    zonaC: []
+                },
+                () => {
+                    this.actualizador();
+                    this.props.sillasElegidas(this.state.sillasElegidas);
+                }
+            );
         }
     }
 
     actualizador = () => {
-        this.setState({ clase: this.props.clase }, () => {
-            let claseJson;
-            //! FALTA SILLAS VIP
-            if (this.state.clase === "Ejecutivo") {
+        let claseJson;
+        //! FALTA SILLAS VIP
+        switch (this.state.clase) {
+            case "Ejecutivo":
                 claseJson = sillasJson.Ejecutivo;
-            } else if (this.state.clase === "PrimeraClase") {
+                break;
+            case "PrimeraClase":
                 claseJson = sillasJson.PrimeraClase;
-            } else if (this.state.clase === "Economica") {
+                break;
+            case "Economica":
                 claseJson = sillasJson.Economica;
-            } else if (this.state.clase === "Turistica") {
+                break;
+            case "Turistica":
                 claseJson = sillasJson.Turistica;
-            } else {
-                return <></>;
-            }
-            function distribuir(num) {
-                let redondeado = Math.floor(num / 3);
-                let sumaRedondeado = redondeado * 3;
-                let residuo = num - sumaRedondeado;
-                let filas = [redondeado, redondeado, redondeado];
-                for (let i = 0; i < residuo; i++) {
-                    if (i <= filas.length) {
-                        filas[i] = filas[i] + 1;
-                    } else {
-                        filas[i - 2] = filas[i - 2] + 1;
-                    }
+                break;
+            default:
+                break;
+        }
+
+        function distribuir(num) {
+            let redondeado = Math.floor(num / 3);
+            let sumaRedondeado = redondeado * 3;
+            let residuo = num - sumaRedondeado;
+            let filas = [redondeado, redondeado, redondeado];
+            for (let i = 0; i < residuo; i++) {
+                if (i <= filas.length) {
+                    filas[i] = filas[i] + 1;
+                } else {
+                    filas[i - 2] = filas[i - 2] + 1;
                 }
-                let zonas = [[], [], []];
-                let ctn = 0;
-                for (let i = 0; i < 3; i++) {
-                    for (let j = 0; j < filas[i]; j++) {
-                        zonas[i].push(claseJson[ctn++].silla);
-                    }
-                }
-                return zonas;
             }
-            let zonas = distribuir(claseJson.length);
-            this.setState({
-                zonaA: zonas[0],
-                zonaB: zonas[1],
-                zonaC: zonas[2]
-            });
+            let zonas = [[], [], []];
+            let ctn = 0;
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < filas[i]; j++) {
+                    zonas[i].push(claseJson[ctn++].silla);
+                }
+            }
+            return zonas;
+        }
+        let zonas = distribuir(claseJson.length);
+        this.setState({
+            zonaA: zonas[0],
+            zonaB: zonas[1],
+            zonaC: zonas[2]
         });
     };
 
+    sillasElegidas = (silla, estado) => {
+        if (estado) {
+            this.state.sillasElegidas.splice(
+                this.state.sillasElegidas.indexOf(silla),
+                1
+            );
+            this.setState({ sillasElegidas: this.state.sillasElegidas }, () => {
+                this.props.sillasElegidas(this.state.sillasElegidas);
+            });
+        } else {
+            this.setState(
+                { sillasElegidas: [...this.state.sillasElegidas, silla] },
+                () => {
+                    this.props.sillasElegidas(this.state.sillasElegidas);
+                }
+            );
+        }
+    };
+
     render() {
-        let ctn = 1;
         return this.state.clase === String ? (
             <></>
         ) : (
@@ -76,30 +109,30 @@ class Sillas extends Component {
                     <ol className="sillas">
                         {Object.keys(this.state.zonaA).map(i => (
                             <Silla
-                                key={ctn++}
+                                key={i}
                                 silla={this.state.zonaA[i]}
-                                // silla={ctn}
-                                numero={i}
+                                numero={`a${i}`}
+                                sillasElegidas={this.sillasElegidas}
                             />
                         ))}
                     </ol>
                     <ol className="sillas">
                         {Object.keys(this.state.zonaB).map(i => (
                             <Silla
-                                key={ctn++}
+                                key={i}
                                 silla={this.state.zonaB[i]}
-                                // silla={ctn}
-                                numero={i}
+                                numero={`b${i}`}
+                                sillasElegidas={this.sillasElegidas}
                             />
                         ))}
                     </ol>
                     <ol className="sillas">
                         {Object.keys(this.state.zonaC).map(i => (
                             <Silla
-                                key={ctn++}
+                                key={i}
                                 silla={this.state.zonaC[i]}
-                                // silla={ctn}
-                                numero={i}
+                                numero={`c${i}`}
+                                sillasElegidas={this.sillasElegidas}
                             />
                         ))}
                     </ol>

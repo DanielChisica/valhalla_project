@@ -7,15 +7,23 @@ import RadioButton from "../common/RadioButton";
 import Habitaciones from "./Habitaciones";
 import Adultos from "./Adultos";
 import Ninos from "./Ninos";
+import Paises from "./PaisesDestinos";
 
 class Reservacion extends Component {
     state = {
-        clase: String
+        clase: "",
+        mostrarSillas: false
     };
 
     resultado = dato => {
         this.setState({ clase: dato }, () => {
             this.props.resultado(this.state.clase);
+        });
+    };
+
+    mostrarSillas = () => {
+        this.setState({ mostrarSillas: true }, () => {
+            this.props.mostrarSillas(this.state.mostrarSillas);
         });
     };
 
@@ -25,13 +33,17 @@ class Reservacion extends Component {
                 <header>
                     <h1>Reservación</h1>
                 </header>
-                    
+
                 <form className="formulario">
                     <div className="formulario-textboxs">
-                        <TextBox titulo="Nombre" />
-                        <TextBox titulo="Apellido" />
-                        <TextBox titulo="Correo" />
-                        <TextBox titulo="Numero Documento" />
+                        <h1>Pais destino</h1>
+                        <Paises />
+                        <h1>Pais Regreso</h1>
+                        <Paises />
+                        <TextBox tipo="text" titulo="Nombre" />
+                        <TextBox tipo="text" titulo="Apellido" />
+                        <TextBox tipo="text" titulo="Correo" />
+                        <TextBox tipo="text" titulo="Numero Documento" />
 
                         <RadioButton
                             titulo="Ejecutivo"
@@ -53,6 +65,19 @@ class Reservacion extends Component {
                             name="clase"
                             resultado={this.resultado}
                         />
+
+                        <Boton
+                            titulo="Mostrar Sillas"
+                            funcion={this.mostrarSillas}
+                        />
+
+                        {Object.keys(this.props.sillasCompradas).map(i => (
+                            <TextBox
+                                key={i}
+                                tipo="text"
+                                titulo={this.props.sillasCompradas[i]}
+                            />
+                        ))}
                     </div>
 
                     <div className="hotel-reserva">
@@ -67,7 +92,7 @@ class Reservacion extends Component {
                     <Boton titulo="Pedir Ticket" />
                 </form>
 
-                {/*  
+                {/*
                  clase[4] primera ejecutiva economico turista
 
                 nombre, apellido, correo, numero de documento,
@@ -86,13 +111,13 @@ class Reservacion extends Component {
                 filandia
                 tipo, [] tour , precio
                 valortotal-plan turistico
-                                
-                hotel: 
+
+                hotel:
                 ciudad destino, tipo de acomodacion_ [sencilla doble suite], valor ospedaje,
                 habitcione adultos niños
-                                
-                aimentacion: 
-                almuerzo y cena true/false, estilo bufet: [] 
+
+                aimentacion:
+                almuerzo y cena true/false, estilo bufet: []
                 suecia
                 tipo, [] comida , precio
                 islandoia
@@ -101,10 +126,10 @@ class Reservacion extends Component {
                 tipo, [] comida , precio
                 valortotal-plan turistico
                 totalAlimentacion
-                                
+
                 alquiler de vehiculos:
                 vehiculo: tipo, marca, modelo, dias alquiler, valor del alquiler
-                                
+
                 shows:
                 suecia
                 tipo, [] show , precio

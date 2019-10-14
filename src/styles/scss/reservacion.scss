@@ -43,10 +43,10 @@ $_circulo: #ac92ec;
     position: relative;
     border-radius: 2px;
     background-color: #f9f9f9;
-    transition-duration: .2;
+    transition-duration: 0.2;
     overflow: auto;
 
-    >.formulario {
+    > .formulario {
         background-color: $_2;
         margin: 0 50px;
         padding: 20px 0;
@@ -54,13 +54,13 @@ $_circulo: #ac92ec;
         z-index: 2;
         // display: flex;
 
-        >.formulario-textboxs {
+        > .formulario-textboxs {
             width: 60%;
             float: left;
             display: grid;
             grid-template-columns: 1fr 1fr;
 
-            >input[type="text"] {
+            > input[type="text"] {
                 width: 80%;
                 border: 1px solid $_3;
                 border-radius: 5px;
@@ -69,7 +69,7 @@ $_circulo: #ac92ec;
                 text-align: left;
                 font-size: 17px;
                 color: $_5;
-                transition-duration: .25s;
+                transition-duration: 0.25s;
                 font-weight: 400;
 
                 &:hover {
@@ -86,7 +86,7 @@ $_circulo: #ac92ec;
             label {
                 color: $_5;
                 text-transform: uppercase;
-                letter-spacing: .3px;
+                letter-spacing: 0.3px;
                 font-size: 13px;
                 font-weight: 500;
                 text-align: left;
@@ -109,16 +109,16 @@ $_circulo: #ac92ec;
                     border-radius: 100%;
 
                     &:after {
-                        content: '';
+                        content: "";
                         position: absolute;
-                        top: 4px;
-                        left: 4px;
+                        top: 5px;
+                        left: 5px;
                         width: 10px;
                         height: 10px;
                         border-radius: 100%;
                         background: $_circulo;
-                        transition: all .2s ease;
-                        opacity: .08;
+                        transition: all 0.2s ease;
+                        opacity: 0.08;
                         pointer-events: none;
                     }
                 }
@@ -133,7 +133,7 @@ $_circulo: #ac92ec;
 
                 input[type="radio"] {
                     &:checked {
-                        &+.label {
+                        & + .label {
                             &:after {
                                 transform: scale(2);
                                 opacity: 1;
@@ -148,7 +148,7 @@ $_circulo: #ac92ec;
             }
         }
 
-        >.hotel-reserva {
+        > .hotel-reserva {
             // position: absolute;
             // top: 20px;
             // right: 50px;
@@ -157,20 +157,21 @@ $_circulo: #ac92ec;
             min-width: 300px;
             padding: 20px;
             border-radius: 4px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.47), 0 10px 23px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.47),
+                0 10px 23px rgba(0, 0, 0, 0.2);
             // float: right;
             display: inline-block;
 
-            >.habitacion-adultos-ninos {
+            > .habitacion-adultos-ninos {
                 display: flex;
                 margin: 5% 0;
 
-                >.contenido-izquierda {
+                > .contenido-izquierda {
                     width: 100%;
                     text-align: left;
                     padding: 10px;
 
-                    >span {
+                    > span {
                         color: $_u;
                         position: relative;
                         z-index: 1;
@@ -189,13 +190,13 @@ $_circulo: #ac92ec;
                     }
                 }
 
-                >.contenido-derecha {
+                > .contenido-derecha {
                     color: $_u;
                     width: 100%;
                     display: grid;
                     grid-template-columns: 1fr 1.2fr 1fr;
 
-                    >.comun {
+                    > .comun {
                         border: 1px solid $_3;
                         cursor: pointer;
 
@@ -210,33 +211,33 @@ $_circulo: #ac92ec;
                         }
                     }
 
-                    >.suma {
-                        >.icono {
+                    > .suma {
+                        > .icono {
                             background-image: url("../../images/icons/icons8-menos-36.png");
                         }
                     }
 
-                    >.cero {
+                    > .cero {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         box-shadow: inset 0 3px 3px -3px rgba(0, 0, 0, 0.25);
                     }
 
-                    >.menos {
-                        >.icono {
+                    > .menos {
+                        > .icono {
                             background-image: url("../../images/icons/add.png");
                         }
                     }
                 }
             }
 
-            >.niño {
+            > .niño {
                 background-color: $_u;
                 display: flex;
                 margin: 5% 0;
 
-                >.contenido-izquierda {
+                > .contenido-izquierda {
                     color: $_3;
                     width: 100%;
                     text-align: left;
@@ -261,13 +262,13 @@ $_circulo: #ac92ec;
                     // }
                 }
 
-                >.contenido-derecha {
+                > .contenido-derecha {
                     width: 50%;
                     border-left: 1px solid $_3;
                     display: flex;
                     position: relative;
 
-                    >select {
+                    > select {
                         appearance: none;
                         outline: 0;
                         box-shadow: none;
@@ -298,7 +299,6 @@ $_circulo: #ac92ec;
                     &:hover {
                         &::after {
                             color: $_circulo;
-                            ;
                         }
                     }
                 }
@@ -328,7 +328,7 @@ $_circulo: #ac92ec;
             // width: 100%;
             // width: 250px;
             cursor: pointer;
-            transition-duration: .25s;
+            transition-duration: 0.25s;
 
             &:hover {
                 background-color: black;
@@ -336,4 +336,50 @@ $_circulo: #ac92ec;
             }
         }
     }
+}
+
+// * {
+//     font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+// }
+
+.fechaviaje {
+    /* margin: 20px;
+    padding: 1px; */
+    float: none;
+    /* float: auto; */
+    position: relative;
+}
+
+.bg-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-contents {
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 42px;
+    color: #333;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.close:hover {
+    color: #666;
 }

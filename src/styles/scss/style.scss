@@ -12,6 +12,7 @@ $_u: rgb(0, 0, 0);
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     text-align: center;
     font-family: "Fira Code";
 }
@@ -60,14 +61,40 @@ ol {
 }
 
 .sillaFalse {
-    clip-path: polygon(0 0, 0% 20%, 0 50%, 0% 80%, 0 100%, 50% 100%, 100% 100%, 100% 80%, 100% 50%, 100% 20%, 100% 0, 50% 0);
+    clip-path: polygon(
+        0 0,
+        0% 20%,
+        0 50%,
+        0% 80%,
+        0 100%,
+        50% 100%,
+        100% 100%,
+        100% 80%,
+        100% 50%,
+        100% 20%,
+        100% 0,
+        50% 0
+    );
     background-color: $_a;
-    animation: magia .5s both;
+    animation: magia 0.5s both;
 }
 
 @keyframes magia {
     to {
-        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        clip-path: polygon(
+            20% 0%,
+            0% 20%,
+            30% 50%,
+            0% 80%,
+            20% 100%,
+            50% 70%,
+            80% 100%,
+            100% 80%,
+            70% 50%,
+            100% 20%,
+            80% 0%,
+            50% 30%
+        );
         background-color: $_e;
     }
 }
@@ -78,4 +105,23 @@ ol {
 
 hr {
     border: 1px solid $_u;
+}
+
+.inicio > input[type="text"],
+.inicio > input[type="password"] {
+    display: block;
+    margin: 20px auto;
+    background-color: #262e49;
+    color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    padding: 14px 10px;
+    width: 320px;
+    outline: none;
+    transition: all 0.2s ease-out;
+}
+
+.inicio > input[type="text"]::placeholder,
+.inicio > input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.507);
 }

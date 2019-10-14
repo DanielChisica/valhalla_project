@@ -1,0 +1,15 @@
+{
+    "vuelotiquetess": {
+        "numeroTicket": "random878987",
+        "vueloNumero": "AV896",
+        "pasajeros": 3,
+        "tipoCategoria": "ejecutiva",
+        "sillasOcupadas": "{[a[0, 0, 3][b[4: false, 5: true, 6: false] c[7, 8, 9]]]]",
+        "tiqueteEstado":"pagado/cancelado"
+    },
+    "reservaHotel": {
+        "numeroReservahotel": "AKIPAL",
+        "reservaEstado": "pagado/cancelado",
+        "brazaleteTour": "98776655"
+    }
+}

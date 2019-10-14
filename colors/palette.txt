@@ -1,0 +1,136 @@
+1:
+    hex: #14193D
+    rgb: rgb(20,25,61)
+
+2:
+    hex: #F4F6FC
+    rgb: rgb(244,246,252)
+
+3:
+    hex: #D2D4DF
+    rgb: rgb(210,212,223)
+
+4:
+    hex: #898CA1
+    rgb: rgb(137, 140, 161)
+
+5:
+    hex: #6A6D85
+    rgb: rgb(106, 109, 133)
+
+
+De hexadecimal a rgb:
+https://www.colorhexa.com/
+https://mycolor.space/
+https://cssgradient.io/
+
+
+// Colors Start
+$_1: #14193d
+$_2: #f4f6fc
+$_3: #d2d4df
+$_4: #898ca1
+$_5: #6a6d85
+
+//* mira estos colores de sillas
+    //* https://www.vivaaerobus.com/upload/Images/custom-html/seleccion-asientos-diagrama_original.jpg
+//*//*https://vivacolombia.org/wp-content/uploads/2017/10/color-sillas-vivacolombia.jpg
+//Colores de Prueba
+$_a: #50aa45
+$_b: #20232a
+// $_c: #050505
+// $_d: #15171b
+$_e: #1a2c61
+// $_f: #0a0b0d
+// $_g:
+// $_h: #00008b
+// $_i: #00003f
+$_j:  #ceffff
+$_k:  #82c1ff
+// $_l:
+// $_m:
+// $_n:
+// $_ñ:
+// $_o:
+// $_p:
+// $_q:
+// $_r:
+// $_s:
+$tamanoSilla: 20px
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    text-align: center
+    font-family: "Fira Code"
+
+body
+    background-color: $_2
+    color: $_1
+
+ol
+    list-style: none
+
+.zonas
+    display: flex
+    justify-content: center
+    align-items: center
+
+.sillas
+    padding: 10px
+    margin: 20px
+    background-color: $_1
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 15px
+
+.silla
+    padding: $tamanoSilla
+
+.sillaTrue
+    background-color: $_a
+    color: $_1
+    cursor: pointer
+
+.sillaTrue:hover
+    background-color: $_e
+
+.sillaFalse
+    background-color: $_e
+    cursor: not-allowed
+
+//     background: #000000;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//     background: #0f0c29;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//     background: #232526;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// $_6:background: #536976;  /* fallback for old browsers */
+// $_7: background: -webkit-linear-gradient(to right, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
+// $_8: background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+// background: #2980b9;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//     background: #4B79A1;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//     background: #1e3c72;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    // background: #232526;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//* mira estos colores de sillas
+    //* https://www.vivaaerobus.com/upload/Images/custom-html/seleccion-asientos-diagrama_original.jpg
+//*//*https://vivacolombia.org/wp-content/uploads/2017/10/color-sillas-vivacolombia.jpg

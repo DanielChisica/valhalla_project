@@ -1,0 +1,29 @@
+{
+        
+
+    "vuelotiquetess": {
+        
+        "numerotickete": "random878987",
+        "finlandiaVerano": "AV896",
+        "pasajeros": 3,
+        "tipocategoria": "ejecutiva",
+        "sillasaocupar": "{[a[0, 0, 3][b[4: false, 5: true, 6: false] c[7, 8, 9]]]]",
+        "numeroreservahotel":"AKIPAL",
+        "reserva":"pagado/cancelado",
+        "brasaletetour":"98776655"
+    
+    },
+
+     
+        "vueloAvion": {
+        "vueloNumero":"AV896",
+        "sillasVIP":[],
+        "sillasEjecutiva":["a4","a5","a6"],
+        "sillasEconomica":[],
+        "sillasTurista":[]
+    
+    }
+
+}
+
+

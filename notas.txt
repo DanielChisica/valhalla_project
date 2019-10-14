@@ -1,0 +1,22 @@
+pasajeros (cantidades adultos, niños)
+planturistico se ajusta según (verano, otoño, invierno)
+72 horas antes de cancelacion o 30% multa
+fecha salida vuelo 
+
+millas usuario registrado
+descuentos por millas
+promocion por afiliarte
+envio correo PDF
+
+
+
+
+
+
+"vuelotiquetess": {
+    "numerotickete": "43565768878987",
+    "finlandiaVerano": "AV896",
+    "pasajeros": 3,
+    "tipocategoria": "ejecutiva",
+    "sillasaocupar": "{[a[0, 0, 3][b[4: false, 5: true, 6: false] c[7, 8, 9]]]]"
+}

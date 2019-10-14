@@ -7,10 +7,10 @@
   position: relative;
   border-radius: 2px;
   background-color: #f9f9f9;
-  transition-duration: .2;
+  transition-duration: 0.2;
   overflow: auto; }
   .reservacion > .formulario {
-    background-color: #f4f6fc;
+    /* background-color: #f4f6fc; */
     margin: 0 50px;
     padding: 20px 0;
     position: relative;
@@ -29,7 +29,7 @@
         text-align: left;
         font-size: 17px;
         color: #6a6d85;
-        transition-duration: .25s;
+        transition-duration: 0.25s;
         font-weight: 400; }
         .reservacion > .formulario > .formulario-textboxs > input[type="text"]:hover {
           background-color: rgba(255, 255, 255, 0.4); }
@@ -40,7 +40,7 @@
       .reservacion > .formulario > .formulario-textboxs label {
         color: #6a6d85;
         text-transform: uppercase;
-        letter-spacing: .3px;
+        letter-spacing: 0.3px;
         font-size: 13px;
         font-weight: 500;
         text-align: left; }
@@ -59,16 +59,16 @@
           border: 1px solid #898ca1;
           border-radius: 100%; }
           .reservacion > .formulario > .formulario-textboxs .radio .label:after {
-            content: '';
+            content: "";
             position: absolute;
-            top: 4px;
-            left: 4px;
+            top: 5px;
+            left: 5px;
             width: 10px;
             height: 10px;
             border-radius: 100%;
             background: #ac92ec;
-            transition: all .2s ease;
-            opacity: .08;
+            transition: all 0.2s ease;
+            opacity: 0.08;
             pointer-events: none; }
         .reservacion > .formulario > .formulario-textboxs .radio:hover .label:after {
           transform: scale(4.6); }
@@ -176,9 +176,48 @@
       padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
-      transition-duration: .25s; }
+      transition-duration: 0.25s; }
       .reservacion > .formulario button:hover {
         background-color: black;
         color: #f4f6fc; }
+
+.fechaviaje {
+  /* margin: 20px;
+  padding: 1px; */
+  float: none;
+  /* float: auto; */
+  position: relative; }
+
+.bg-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; }
+
+.modal-contents {
+  height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: white;
+  padding: 20px;
+  position: relative;
+  border-radius: 4px; }
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 42px;
+  color: #333;
+  transform: rotate(45deg);
+  cursor: pointer; }
+
+.close:hover {
+  color: #666; }
 
 /*# sourceMappingURL=reservacion.css.map */

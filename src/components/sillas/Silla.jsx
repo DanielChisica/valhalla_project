@@ -9,12 +9,6 @@ class Silla extends Component {
         this.setState({ silla: this.props.silla });
     }
 
-    estadoSilla = () => {
-        this.props.silla === false
-            ? this.setState({ silla: false })
-            : this.setState({ silla: !this.state.silla });
-    };
-
     mostrarDisponibilidad() {
         if (this.state.silla) {
             return (
@@ -29,6 +23,17 @@ class Silla extends Component {
             );
         }
     }
+
+    estadoSilla = () => {
+        this.props.silla === false
+            ? this.setState({ silla: false })
+            : this.setState({ silla: !this.state.silla }, () => {
+                  this.props.sillasElegidas(
+                      this.props.numero,
+                      this.state.silla
+                  );
+              });
+    };
 
     render() {
         return this.mostrarDisponibilidad();

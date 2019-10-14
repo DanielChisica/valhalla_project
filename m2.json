@@ -1,0 +1,19 @@
+{
+    "vuelosolo": {
+        "destino": {
+            "paisdestino": "finlandia/islandia/suecia"
+        },
+
+        "categoria": {
+            "tipocategoria": "ejecutiva/economica/turista",
+            "preciocategoria": "1500000"
+        },
+        "vuelotiquetess": {
+            "numerotickete": "43565768878987",
+            "finlandiaVerano": "AV896",
+            "pasajeros": 3,
+            "tipocategoria": "ejecutiva",
+            "sillasaocupar": "{[a[0, 0, 3][b[4: false, 5: true, 6: false] c[7, 8, 9]]]]"
+        }
+    }
+}

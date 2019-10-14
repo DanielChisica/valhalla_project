@@ -1,0 +1,212 @@
+{
+  "agencia": {
+    "fechaVuelo": {
+      "fechaSalida": "new Date()",
+      "horaSalida": "new Date()",
+      "fechaLlegada": "new Date()",
+      "horaLlegada": "new Date()",
+      "fechaSalida2": "new Date()",
+      "horaSalida2": "new Date()",
+      "fechaLlegada2": "new Date()",
+      "horaLlegada2": "new Date()"
+    },
+    "destino": {
+      "paisDestino": "bogota/finlandia/islandia/suecia",
+      "paisDestino2": "bogota/finlandia/islandia/suecia",
+
+
+
+      "aeropuertoDestinoBogota": "Aeropuerto Internacional El Dorado",
+      "aeropuertoDestinoIslandia": "Aeropuerto Internacional de Reikiavik - Keflavík KEF BIKF Keflavík - Reikiavik (Keflavíkurflugvöllur)",
+      "aeropuertoDestinoSuecia": "Aeropuerto de Estocolmo - Arlanda ARN ESSA Estocolmo (Stockholm - Arlanda flygplats)",
+      "aeropuertoDestinoFinlandia": "Aeropuerto de Helsinki - Vantaa HEL EFHK Helsinki (Helsinki - Vantaan lentoasema)"
+    },
+    "categoria": {
+      "tipoCategoria": "vip/ejecutiva/economica/turista",
+      "precioTiquete": "1500000",
+      "cantidadPasajerosAdultos": "8",
+      "cantidadPasajerosNinos": "2",
+      "valortotal": "888888888"
+    },
+    "planTuristico": {
+      "suecia": [
+        {
+          "tipo": "S1",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        },
+        {
+          "tipo": "S2",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        },
+        {
+          "tipo": "S3",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        }
+      ],
+      "finlandia": [
+        {
+          "tipo": "S1",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        },
+        {
+          "tipo": "S2",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        },
+        {
+          "tipo": "S3",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        }
+      ],
+      "islandia": [
+        {
+          "tipo": "S1",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        },
+        {
+          "tipo": "S2",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        },
+        {
+          "tipo": "S3",
+          "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+          "precio": 143447
+        }
+      ]
+    },
+    "valorTotalPlan": {
+      "valorPlanturisticoSuma": "100000000"
+    },
+    "hotel": {
+      "ciudadDestino": "suecia/islandia/finlandia",
+      "tipoAcomodacion": "sencilla/doble/suite",
+      "valorHospedaje": "800000",
+      "habitaciones": 4,
+      "adultos": 4,
+      "ninos": "Array[0]",
+      "servicios": [
+        {
+          "servicios1": "servicio de lavandería y planchado"
+        },
+        {
+          "servicios2": "servicio lustrado de zapatos"
+        },
+        {
+          "servicios3": "check in / out privado"
+        },
+        {
+          "servicios4": "check in / out express"
+        },
+        {
+          "servicios5": "recepción 24 horas"
+        }
+      ]
+    },
+    "alimentacion": {
+      "almuerzoYcena": "true/false",
+      "Bufe": {
+        "suecia": [
+          {
+            "tipo": "S1",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          },
+          {
+            "tipo": "S2",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          },
+          {
+            "tipo": "S3",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          }
+        ],
+        "finlandia": [
+          {
+            "tipo": "S1",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          },
+          {
+            "tipo": "S2",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          },
+          {
+            "tipo": "S3",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          }
+        ],
+        "islandia": [
+          {
+            "tipo": "S1",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          },
+          {
+            "tipo": "S2",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          },
+          {
+            "tipo": "S3",
+            "tour": "Birka, ciudad de los vikingos - Visita a pie y en barco",
+            "precio": 20000
+          }
+        ]
+      },
+      "totalAlimentacon": "1200000"
+    },
+    "bar": {
+      "Snaps": "Aguardiente de patatas condimentado con ajenjo",
+      "Glögg": "Vino caliente con azúcar con pasas y almendras",
+      "Fjallagrasa": "Moss Schnapps – basada en musgo de mar"
+    },
+    "alquilerVehiculo": {
+      "vehiculo": {
+        "tipo": "",
+        "marca": "",
+        "modelo": "",
+        "dias": "",
+        "valorAlquiler": ""
+      }
+    },
+    "show":{
+        "suecia":[
+            "Fiesta Walpurgis - 30 Abril - 1 Mayo",
+            "Midsommar - Junio",
+            "Semana Medieval - Julio",
+            "Fiesta de la libélula - Julio",
+            "Lucia Fiesta de Luces - Diciembre",
+            "Navidad"
+        ],
+        "finlandia":[
+            "Lux Helsinki - Enero",
+            "Fiesta Walpurgis - 30 Abril - 1 Mayo",
+            "Midsummer - Junio",
+            "Lucia Fiesta de Luces - Diciembre",
+            "Navidad"
+        ],
+        "islandia":[
+            "Þorrablót - Mes de Thor / Enero - Febrero",
+            "Menningarnótt - Noche de cultura islandesa",
+            "Fiesta Walpurgis - 30 Abril - 1 Mayo",
+            "Midsommar - Junio",
+            "Semana Medieval - Julio",
+            "Fiesta de la libélula - Julio",
+            "Fiesta Santa Lucía - Diciembre",
+            "Navidad"
+
+        ]
+    }
+  }
+}
