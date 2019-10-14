@@ -32,65 +32,62 @@ class Sillas extends Component {
     }
 
     actualizador = () => {
-        let sillasJson = '';
-
         Axios.get('http://localhost:8080/api/traersillas')
             .then((response) => {
-                sillasJson = response.data
+                let sillasJson = response.data
                 console.log(sillasJson);
+                let claseJson='';
+                //! FALTA SILLAS VIP
+                switch (this.state.clase) {
+                    case "Ejecutivo":
+                        claseJson = sillasJson.Ejecutivo;
+                        console.log(sillasJson.Ejecutivo)
+                        console.log(claseJson)
+                        break;
+                    case "PrimeraClase":
+                        claseJson = sillasJson.PrimeraClase;
+                        break;
+                    case "Economica":
+                        claseJson = sillasJson.Economica;
+                        break;
+                    case "Turistica":
+                        claseJson = sillasJson.Turistica;
+                        break;
+                    default:
+                        break;
+                }
+                console.log(this.state.clase)
+                function distribuir(num) {
+                    let redondeado = Math.floor(num / 3);
+                    let sumaRedondeado = redondeado * 3;
+                    let residuo = num - sumaRedondeado;
+                    let filas = [redondeado, redondeado, redondeado];
+                    for (let i = 0; i < residuo; i++) {
+                        if (i <= filas.length) {
+                            filas[i] = filas[i] + 1;
+                        } else {
+                            filas[i - 2] = filas[i - 2] + 1;
+                        }
+                    }
+                    let zonas = [[], [], []];
+                    let ctn = 0;
+                    for (let i = 0; i < 3; i++) {
+                        for (let j = 0; j < filas[i]; j++) {
+                            zonas[i].push(claseJson[ctn++].silla);
+                        }
+                    }
+                    return zonas;
+                }
+                let zonas = distribuir(claseJson.length);
+                this.setState({
+                    zonaA: zonas[0],
+                    zonaB: zonas[1],
+                    zonaC: zonas[2]
+                });
             })
             .catch((error) => {
                 console.log(error);
             });
-
-        let claseJson='';
-        //! FALTA SILLAS VIP
-        switch (this.state.clase) {
-            case "Ejecutivo":
-                claseJson = sillasJson.Ejecutivo;
-                console.log(sillasJson.Ejecutivo)
-                console.log(claseJson)
-                break;
-            case "PrimeraClase":
-                claseJson = sillasJson.PrimeraClase;
-                break;
-            case "Economica":
-                claseJson = sillasJson.Economica;
-                break;
-            case "Turistica":
-                claseJson = sillasJson.Turistica;
-                break;
-            default:
-                break;
-        }
-        console.log(this.state.clase)
-        function distribuir(num) {
-            let redondeado = Math.floor(num / 3);
-            let sumaRedondeado = redondeado * 3;
-            let residuo = num - sumaRedondeado;
-            let filas = [redondeado, redondeado, redondeado];
-            for (let i = 0; i < residuo; i++) {
-                if (i <= filas.length) {
-                    filas[i] = filas[i] + 1;
-                } else {
-                    filas[i - 2] = filas[i - 2] + 1;
-                }
-            }
-            let zonas = [[], [], []];
-            let ctn = 0;
-            for (let i = 0; i < 3; i++) {
-                for (let j = 0; j < filas[i]; j++) {
-                    zonas[i].push(claseJson[ctn++].silla);
-                }
-            }
-            return zonas;
-        }
-        let zonas = distribuir(claseJson.length);
-        this.setState({
-            zonaA: zonas[0],
-            zonaB: zonas[1],
-            zonaC: zonas[2]
-        });
     };
 
     sillasElegidas = (silla, estado) => {
