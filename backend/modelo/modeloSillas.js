@@ -6,13 +6,10 @@ const Schema = mongoose.Schema
 
 
 const SillasSchema = new Schema({//variable que tiene todas las propiedades del metodo por eso la instanciamos
-
     PrimeraClase : Array(47),
     Ejecutivo : Array(93),
     Economica : Array(187),
     Turistica : Array(140)
-
-
 })
 
 

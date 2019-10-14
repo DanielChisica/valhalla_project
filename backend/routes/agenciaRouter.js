@@ -1,20 +1,20 @@
 const express = require  ('express');
 const router = express.Router();
 const vuelo = require('../modelo/modeloVuelo');
-<<<<<<< HEAD
 const sillas = require('../modelo/modeloSillas')
-=======
->>>>>>> 1ffbde7c0610f10d2c003cc6cd8bc813003a546a
 const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const xoAuth2= require('xoauth2')
-<<<<<<< HEAD
-
-
 const destinos = require('../modelo/modeloDestinos')
 const todo = require('../modelo/modeloTodo')
+const controladorUsuario = require('../controladores/usuario')
+const pdf = require('html-pdf');
+const cuerpopdf = require('../modelo/tiquete'); // en esta linea estamos almacenando los archichivos html
+var promise;
 
+router.post('/registrar', controladorUsuario.registrar)
+router.post('/entrar', controladorUsuario.entrar)
 
 // get de el modelo todo incluido
 router.get('/todo', (req, res, next) => {
@@ -34,12 +34,8 @@ router.post('/todo', (req, res, next) => {
     }).catch(next)
 })
 
-=======
->>>>>>> 1ffbde7c0610f10d2c003cc6cd8bc813003a546a
 
 //agregar POST (create)
-
-
 router.get('/crearSillas',(req, res) => {
     const nuevasSillas= new sillas()
 
@@ -200,49 +196,60 @@ router.put('/sillas/:id', (req, res, next) => {
 })
 
 router.post('/correo',(req,res,next)=>{
-    console.log(req.body.receptor)
-    console.log(req.body.ticket)
-    const mensaje = `
+    promise= new Promise((resuelve, rechaza)=>{
+        pdf.create(cuerpopdf(req.body.info), {}).toFile('../tiquete.pdf', (err) => {
+            if(err) {
+                rechaza();
+            }
+            resuelve()// si no hay error en la creaccion se devuelve la promesa y es cuando react
+        });
+    }).then(()=>{
+        console.log(req.body.receptor)
+        const mensaje = `
     <h3>Confirmacion de los tiquetes</h3>
     <br>
     <p>Apreciado usuario, adjuntamos los tiquetes para que haga efectivo su vuelo, gracias por volar con nosotros</p>
   `;
 
-    let transportador = nodemailer.createTransport({
-        service:'gmail',
-        auth: {
-            type: "OAuth2",
-            user: "valhallaairlines@gmail.com",
-            clientId: "124253551329-j2hkma0406pqmipr7iaq1olhhestpelf.apps.googleusercontent.com",
-            clientSecret: "44B_vEabuFVKAeLgUDTjIRK9",
-            refreshToken: "1/dlkv6QzhjjREl_S0-Nvfwuv7RvC23tiUMEj05nH0_FHsY6NXV0rKrU0mGqRXHVaZ"
-        }
-    });
+        let transportador = nodemailer.createTransport({
+            service:'gmail',
+            auth: {
+                type: "OAuth2",
+                user: "valhallaairlines@gmail.com",
+                clientId: "124253551329-j2hkma0406pqmipr7iaq1olhhestpelf.apps.googleusercontent.com",
+                clientSecret: "44B_vEabuFVKAeLgUDTjIRK9",
+                refreshToken: "1/dlkv6QzhjjREl_S0-Nvfwuv7RvC23tiUMEj05nH0_FHsY6NXV0rKrU0mGqRXHVaZ"
+            }
+        });
 
-    // setup email data with unicode symbols
-    let mailOptions = {
-        from: '<valhallaairlines@gmail.com>', // sender address
-        to: req.body.receptor, // list of receivers
-        subject: 'Confirmacion de tiquetes', // Subject line
-        text: '', // plain text body
-        html: mensaje ,
-        attachments:[{
-            filename:'prueba.pdf',
-            path:__dirname+'/tickets/'+req.body.ticket
-        }]// html body
-    };
+        // Configuracion del email
+        let mailOptions = {
+            from: '<valhallaairlines@gmail.com>', // Direccion del que envia
+            to: req.body.receptor, // lista de receptores
+            subject: 'Confirmacion de tiquetes', // Asunto
+            text: '', // Texto plano
+            html: mensaje ,
+            attachments:[{
+                filename:'tiquete.pdf',
+                path:'../tiquete.pdf'
+            }]// html body
+        };
 
-    // send mail with defined transport object
-    transportador.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log('Hola '+error);
-        }
-        console.log('Mensaje enviado: %s', info.messageId);
-        console.log('URL: %s', nodemailer.getTestMessageUrl(info));
+        // Enviar el email con el objeto a transportar
+        transportador.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                return console.log('Hola '+error);
+            }
+            console.log('Mensaje enviado: %s', info.messageId);
+            console.log('URL: %s', nodemailer.getTestMessageUrl(info));
 
-        res.render('contact', {msg:'El mensaje ha sido enviado'});
-    });
+            res.send('El mensaje ha sido enviado');
+        });
+    }).catch((err)=>{
+        console.log(err.message)
+    })
 })
+
 
 
 //Eliminar - Delete
