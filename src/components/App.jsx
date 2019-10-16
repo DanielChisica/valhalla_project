@@ -9,13 +9,26 @@ import Comidas from "./reservacion/comidas"
 import TextBox from "./common/Textbox";
 import Boton from "./common/Boton";
 import Popup from "./common/Popup";
+import Login from "./login/Login";
+import Registro from "./registro/Registro";
 
 class App extends Component {
+
     state = {
         clase: String,
         mostrarSillas: false,
         mostrarLogin: false,
+        mostrarRegistro: false,
         sillasCompradas: []
+    };
+
+
+    iniciarSesion = () => {
+        this.setState({ mostrarLogin: true });
+    };
+
+    registrarse = () => {
+        this.setState({ mostrarRegistro: true });
     };
 
     clase = dato => {
@@ -26,33 +39,34 @@ class App extends Component {
         this.setState({ mostrarSillas: dato });
     };
 
-    iniciarSesion = () => {
-        this.setState({ mostrarLogin: true });
-    };
-
     render() {
         return (
             <>
-                <Boton titulo="Iniciar sesion" funcion={this.iniciarSesion} />
-
                 <div className="fechaviaje">
                     <h1>Fecha Viaje</h1>
                     <Fecha />
                 </div>
-                
+
                 <Popup
                     mostrar={this.state.mostrarLogin}
                     ocultar={e => {
                         this.setState({ mostrarLogin: false });
                     }}
                 >
-                    <h1>Iniciar sesion</h1>
-                    <div className="inicio">
-                        <TextBox tipo="text" titulo="Correo" />
-                        <TextBox tipo="password" titulo="Contraseña" />
-                    </div>
-                    <h1>No tienes cuenta? Creala</h1>
+                    <Login />
                 </Popup>
+                <Boton titulo="Iniciar sesion" funcion={this.iniciarSesion} />
+
+                <Popup
+                    mostrar={this.state.mostrarRegistro}
+                    ocultar={e => {
+                        this.setState({ mostrarRegistro: false });
+                    }}
+                >
+                    <Registro />
+                </Popup>
+
+                <Boton titulo="Registrarse" funcion={this.registrarse} />
 
                 {/* <Fecha /> */}
                 <Reservacion

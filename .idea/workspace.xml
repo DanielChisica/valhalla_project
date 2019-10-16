@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04e7fe3-3d97-4d5a-a41b-88782a54debb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/reservacion/comidas.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/css/comidas.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/registro/Registro.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/agenciaRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/agenciaRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reservacion/Comida.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservacion/paises.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
