@@ -29,7 +29,6 @@ class Comida extends Component {
             value={selectedOption}
             onChange={this.handleChange}
             options={options}
-            isMulti
         />
         </div>
     );

@@ -40,19 +40,19 @@ router.get('/crearSillas',(req, res) => {
     const nuevasSillas= new sillas()
 
     for(i=0;i<47;i++){
-        nuevasSillas.PrimeraClase.push(false)
+        nuevasSillas.PrimeraClase.push({"silla":true})
     }
 
     for(i=0;i<93;i++){
-        nuevasSillas.Ejecutivo.push(false)
+        nuevasSillas.Ejecutivo.push({"silla":true})
     }
 
     for(i=0;i<187;i++){
-        nuevasSillas.Economica.push(false)
+        nuevasSillas.Economica.push({"silla":true})
     }
 
     for(i=0;i<140;i++){
-        nuevasSillas.Turistica.push(false)
+        nuevasSillas.Turistica.push({"silla":true})
     }
 
     nuevasSillas.save().then(()=>{
@@ -75,7 +75,7 @@ router.post('/sillas',(req, res) => {
     req.body.PrimeraClase.forEach((silla)=>{
         var clave = "PrimeraClase."+silla;
         var json = { };
-        json[clave] = true;
+        json[clave] = false;
         var actualizar = { $set: json};
         console.log(actualizar)
         sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
@@ -88,7 +88,7 @@ router.post('/sillas',(req, res) => {
     req.body.Ejecutivo.forEach((silla)=>{
         var clave = "Ejecutivo."+silla;
         var json = { };
-        json[clave] = true;
+        json[clave] = false;
         var actualizar = { $set: json};
         console.log(actualizar)
         sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
@@ -101,7 +101,7 @@ router.post('/sillas',(req, res) => {
     req.body.Economica.forEach((silla)=>{
         var clave = "Economica."+silla;
         var json = { };
-        json[clave] = true;
+        json[clave] = false;
         var actualizar = { $set: json};
         console.log(actualizar)
         sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
@@ -114,7 +114,7 @@ router.post('/sillas',(req, res) => {
     req.body.Turistica.forEach((silla)=>{
         var clave = "Turistica."+silla;
         var json = { };
-        json[clave] = true;
+        json[clave] = false;
         var actualizar = { $set: json};
         console.log(actualizar)
         sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
@@ -264,7 +264,7 @@ router.delete('/vuelo/:id', (req, res, next) => {
 // Traer sillas
 router.get('/traersillas', (req, res, next) => {
     //db.collection.find()
-  sillas.find({ _id:'5da3f96c53ee5823043e2460'}).then((vuelo) => {
+  sillas.find({ _id:'5da6a32e328b501c2220c34b'}).then((vuelo) => {
         res.send(vuelo[0])
     }).catch(next)
 })

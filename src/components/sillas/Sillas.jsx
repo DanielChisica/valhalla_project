@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-
 import Silla from "./Silla";
 import Axios from "axios";
-
+var sillasJson;
+Axios.get('http://localhost:8080/api/traersillas').then((response)=>{
+    sillasJson= response.data
+})
 
 class Sillas extends Component {
     state = {
@@ -32,17 +34,16 @@ class Sillas extends Component {
     }
 
     actualizador = () => {
-        Axios.get('http://localhost:8080/api/traersillas')
-            .then((response) => {
-                let sillasJson = response.data
+        //Axios.get('http://localhost:8080/api/traersillas')
+            //.then((response) => {
+                //let sillasJson = response.data
                 console.log(sillasJson);
-                let claseJson='';
+                let claseJson;
                 //! FALTA SILLAS VIP
                 switch (this.state.clase) {
                     case "Ejecutivo":
                         claseJson = sillasJson.Ejecutivo;
                         console.log(sillasJson.Ejecutivo)
-                        console.log(claseJson)
                         break;
                     case "PrimeraClase":
                         claseJson = sillasJson.PrimeraClase;
@@ -84,10 +85,10 @@ class Sillas extends Component {
                     zonaB: zonas[1],
                     zonaC: zonas[2]
                 });
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+         //   })
+           // .catch((error) => {
+             //   console.log(error);
+            //});
     };
 
     sillasElegidas = (silla, estado) => {
