@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import Sillas from "./sillas/Sillas";
 import Reservacion from "./reservacion/Reservacion";
 import Fecha from "./common/Fecha";
-import Comida from "./reservacion/Comida";
-
+import Paises from "./reservacion/paises";
+import Comidas from "./reservacion/comidas"
 //* Common
 import TextBox from "./common/Textbox";
 import Boton from "./common/Boton";
@@ -73,7 +73,7 @@ class App extends Component {
                         }}
                     />
                 </Popup>
-                <Comida />
+                <Paises />
                 {/* <Sillas clase={this.state.clase} /> */}
             </>
         );

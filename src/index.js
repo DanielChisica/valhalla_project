@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/css/style.css";
+import "./styles/css/comidas.css";
 import App from "./components/App";
 
 // import App from 'components/App.js';

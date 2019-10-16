@@ -75,7 +75,7 @@ router.post('/sillas',(req, res) => {
     req.body.PrimeraClase.forEach((silla)=>{
         var clave = "PrimeraClase."+silla;
         var json = { };
-        json[clave] = false;
+        json[clave] = {"silla":false};
         var actualizar = { $set: json};
         console.log(actualizar)
         sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
@@ -88,7 +88,7 @@ router.post('/sillas',(req, res) => {
     req.body.Ejecutivo.forEach((silla)=>{
         var clave = "Ejecutivo."+silla;
         var json = { };
-        json[clave] = false;
+        json[clave] = {"silla":false};
         var actualizar = { $set: json};
         console.log(actualizar)
         sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
@@ -101,7 +101,7 @@ router.post('/sillas',(req, res) => {
     req.body.Economica.forEach((silla)=>{
         var clave = "Economica."+silla;
         var json = { };
-        json[clave] = false;
+        json[clave] = {"silla":false};
         var actualizar = { $set: json};
         console.log(actualizar)
         sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
@@ -114,7 +114,7 @@ router.post('/sillas',(req, res) => {
     req.body.Turistica.forEach((silla)=>{
         var clave = "Turistica."+silla;
         var json = { };
-        json[clave] = false;
+        json[clave] = {"silla":false};
         var actualizar = { $set: json};
         console.log(actualizar)
         sillas.findOneAndUpdate({ _id: req.body.idAvion},actualizar,false).then(()=>{
@@ -154,9 +154,81 @@ router.get('/turisticos', (req, res, next) => {
     }).catch(next)
 })
 
+// get de el modelo de los destinos turisticos
+router.get('/tasks/:pais', (req, res, next) => {
+    //db.collection.find()
+    destinos.find({pais : req.params.pais  }).then((todo2) => {
+        res.send(todo2)
+    }).catch(next)
+})
+
+
+router.get('/comidas', (req, res, next) => {
+    //db.collection.find()
+    comidas.find({ }).then((todo2) => {
+        res.send(todo2)
+    }).catch(next)
+})
+
+//bueno para pponer un post
+router.post('/tasks/comidas', (req, res, next) => {
+    //db.collection.insert( documento )
+    //req.body -> hace referencia al json documento = {nombre:"", año:"", activa:""}
+    comidas.create(req.body).then((todo2) => {
+        res.send(todo2)
+    }).catch(next)
+})
+
+// este es el post para los autos
+
+router.post('/autos', (req, res, next) => {
+    //db.collection.insert( documento )
+    //req.body -> hace referencia al json documento = {nombre:"", año:"", activa:""}
+    autos.create(req.body).then((todo2) => {
+        res.send(todo2)
+    }).catch(next)
+})
+
+//este es el metodo get para llamar a los  atuos.
+
+router.get('/autos', (req, res, next) => {
+    //db.collection.find()
+    autos.find({ }).then((todo2) => {
+        res.send(todo2)
+    }).catch(next)
+})
+
+
+
+//este es el post para los destinos turisticos
+router.post('/tasks/destinos', (req, res, next) => {
+    //db.collection.insert( documento )
+    //req.body -> hace referencia al json documento = {nombre:"", año:"", activa:""}
+    destinos.create(req.body).then((todo2) => {
+        res.send(todo2)
+    }).catch(next)
+})
+
+
+
+
+// buscar por algun destinos
+// router.get('/tasks/:pais', (req, res, next) => {
+//     //db.collection.find()
+//   destinos.find(req.params.pais).then((todo2) => {
+//         res.send(todo2)
+//     }).catch(next)
+// })
+
+//busca segund el pais
+router.get('/tasks/:pais2', async (req, res) => {
+    const task = await Task.findById(req.params.pais);
+    console.log(req.params.pais)
+    res.json(task);
+});
+
 
 //consultar -> get  - read
-
 router.get('/vuelo', (req, res, next) => {
     //db.collection.find()
   vuelo.find({  }).then((vuelo) => {

@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04e7fe3-3d97-4d5a-a41b-88782a54debb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/valhalla_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/valhalla_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/reservacion/comidas.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/css/comidas.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/agenciaRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/agenciaRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reservacion/Comida.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservacion/Comida.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sillas/Sillas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sillas/Sillas.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reservacion/Comida.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservacion/paises.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mern-exercise-tracker-mongodb/Estructura_backFront" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/reservacion" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -69,6 +69,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/reservacion" />
+      <recent name="$PROJECT_DIR$/src/styles/css" />
       <recent name="$PROJECT_DIR$/backend/routes/tickets" />
     </key>
   </component>
@@ -109,7 +111,7 @@
       <workItem from="1571030526578" duration="1882000" />
       <workItem from="1571070898273" duration="2283000" />
       <workItem from="1571156363637" duration="1358000" />
-      <workItem from="1571197759218" duration="4992000" />
+      <workItem from="1571197759218" duration="8441000" />
     </task>
     <servers />
   </component>

@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import Select from 'react-select';
 
-
-
-
 const options = [
   { value: 'suecia', label: 'Suecia' },
   { value: 'islandia', label: 'Islandia' },
   { value: 'finlandia', label: 'Finlandia' },
 ];
 
-class Comida extends Component {
+class Paises extends Component {
   state = {
     selectedOption: null,
   };
@@ -35,5 +32,5 @@ class Comida extends Component {
   }
 }
 
-export default Comida;
+export default Paises;
 
